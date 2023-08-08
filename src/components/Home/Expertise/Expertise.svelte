@@ -1,24 +1,11 @@
 <script lang="ts">
-    const xp = [
-        {
-            title: 'Software development',
-            info: 'Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript',
-            src: 'https://www.svgrepo.com/show/529988/test-tube.svg',
-            alt: ''
-        },
-        {
-            title: 'Frontend Dev React, Svelte',
-            info: 'Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte and SvelteKit',
-            src: 'https://www.svgrepo.com/show/529988/test-tube.svg',
-            alt: ''
-        }
-    ];
+    import { expertise } from "$lib";
 </script>
 
 <h1 id="expertise" class="mt-20 font-major text-2xl md:text-4xl">Expertise</h1>
 
 <div class="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-0">
-    {#each xp as { alt, info, src, title }}
+    {#each expertise as { alt, info, src, title }}
         <div
             class={`
                 flex flex-col gap-12 p-4 pb-12 justify-between

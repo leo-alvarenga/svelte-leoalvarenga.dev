@@ -15,16 +15,16 @@
             href: '#expertise',
         },
         {
-            title: 'Work',
-            href: '#work',
+            title: 'Experience',
+            href: '#xp',
         },
         {
             title: 'Skills',
-            href: '#work',
+            href: '#xp',
         },
         {
             title: 'Contact',
-            href: '#work',
+            href: '#xp',
         }
     ];
 </script>
@@ -45,28 +45,6 @@
 <Footer />
 
 <style lang="postcss">
-    :root {
-        --color-primary: #ff0a78;
-        --color-background: #0e141b;
-        --color-text: #f2f5f7;
-        --color-text-grey: #9ca8b4;
-        --color-light: #182635;
-        --color-accent-pink: #e60067;
-        --color-accent-grey: #2b333b;
-        --color-accent-dark: #ffe100;
-        --color-accent-dark2: #4a67f7;
-        --color-blue-dark: #182635;
-        --color-blue-light: #4a67f7;
-        --color-tinted: #151f28;
-        --color-link: #ffe100;
-
-        --size: 0.25rem;
-        --quarter: calc(var(--size) / 4);
-        --half: calc(var(--size) / 2);
-        --double: calc(var(--size) * 2);
-        --four: calc(var(--size) *4);
-    }
-
     :global(body) {
         margin: 0;
         padding: 0;
@@ -85,6 +63,7 @@
 
     :global(a, a:visited, a:hover, a:active) {
         text-decoration: none;
+        cursor: pointer;
 
         color: theme(colors.text);
         -webkit-transition: all 550ms ease-out;

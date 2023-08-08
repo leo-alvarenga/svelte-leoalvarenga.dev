@@ -9,13 +9,14 @@
     class={`
         flex items-center
         justify-center py-4 pb-0 px-2 gap-1
-        flex-col-reverse w-full relative
+        flex-col w-full relative
 
-        lg:flex-row lg:flex-wrap
+        lg:flex-row-reverse lg:flex-wrap
         lg:w-full lg:px-16 lg:mt-4
         lg:gap-8
     `}
 >
+    <LinkArea {links} />
     <a
         class={`
             brand text-center
@@ -28,8 +29,6 @@
     >
         {'</>'}
     </a>
-
-    <LinkArea {links} />
 </nav>
 
 <style lang="postcss">

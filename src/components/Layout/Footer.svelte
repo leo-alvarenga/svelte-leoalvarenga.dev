@@ -4,5 +4,5 @@
         justify-center mt-8 py-4 w-full relative
     `}
 >
-    <h4>Built with love, using SvelteKit and TailwindCSS</h4>
+    <h4>Built with ❤️, using SvelteKit and TailwindCSS</h4>
 </footer>
