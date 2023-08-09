@@ -24,7 +24,7 @@
     };
 </script>
 
-<h1 id="xp" class="mt-20 font-major text-2xl md:text-4xl">Work Experience</h1>
+<h1 id="xp" class="mt-5 lg:mt-16 font-major text-2xl md:text-4xl">Work Experience</h1>
 
 <div
     class={`

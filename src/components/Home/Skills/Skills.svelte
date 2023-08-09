@@ -3,11 +3,11 @@
 	import { skills } from "$lib";
 
 </script>
-<h1 id="skills" class="mt-20 font-major text-2xl md:text-4xl">Skills</h1>
+<h1 id="skills" class="mt-5 lg:mt-16 font-major text-2xl md:text-4xl">Skills</h1>
 
 <div
     class={`
-        w-[70%] rounded 
+        w-[90%] lg:w-[70%] rounded 
         border-[1px] border-text 
         border-opacity-40 flex
         flex-row flex-wrap gap-4
