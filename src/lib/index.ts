@@ -5,7 +5,7 @@ export * from './types';
 export const skills = [
     'HTML', 'CSS', 'JavaScript',
     'TypeScript', 'React', 'Svelte',
-    'SvelteKit', 'Linux', 'Postgresql',
+    'SvelteKit', 'Linux', 'SQL', 'Postgresql',
     'styled-components', 'TailwindCSS',
     'Docker', 'Bash'
 ];
@@ -14,14 +14,12 @@ export const expertise: Expertise[] = [
     {
         title: 'Software development',
         info: 'Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript',
-        src: 'https://www.svgrepo.com/show/529988/test-tube.svg',
-        alt: ''
+        icon: 'code',
     },
     {
         title: 'Frontend Dev React, Svelte',
         info: 'Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte, SvelteKit',
-        src: 'https://www.svgrepo.com/show/529988/test-tube.svg',
-        alt: ''
+        icon: 'frontend',
     }
 ];
 

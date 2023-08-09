@@ -6,8 +6,7 @@ export interface NavbarLink {
 export interface Expertise {
     title: string;
     info: string;
-    src: string;
-    alt: string;
+    icon: string;
 }
 
 export interface Experience {
