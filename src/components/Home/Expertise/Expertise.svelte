@@ -1,20 +1,31 @@
 <script lang="ts">
+    import Fa from 'svelte-fa';
+    import { faCode, faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
+
     import { expertise } from "$lib";
 </script>
 
-<h1 id="expertise" class="mt-20 font-major text-2xl md:text-4xl">Expertise</h1>
+<h1 id="expertise" class="mt-5 lg:mt-20 font-major text-2xl md:text-4xl">Expertise</h1>
 
 <div class="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-0">
-    {#each expertise as { alt, info, src, title }}
+    {#each expertise as { icon, info, title }}
         <div
             class={`
                 flex flex-col gap-12 p-4 pb-12 justify-between
-                items-end border-2 border-text flex-1
+                items-end border border-text flex-1
+                md:border-l-0 md:first:border-l
             `}
         >
-            <div class="flex flow-row gap-4 items-start justify-between w-full">
-                <img class="w-12" {src} {alt}>
-                <h3 class="text-2xl md:text-4xl text-end">{title}</h3>
+            <div class="flex flow-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
+                {#if icon === 'code'}
+                    <Fa icon={faLaptopCode} />
+                {:else if icon === 'frontend'}
+                    <Fa icon={faObjectGroup} />
+                {:else}
+                    <Fa icon={faCode} />
+                {/if}
+            
+                <h3 class="text-end">{title}</h3>
             </div>
             <div class="flex flex-col text-right pl-4">
                 <p
@@ -23,7 +34,7 @@
                         md:text-xl pl-4 relative 
                         border-l-[1px] border-l-textGrey
                         border-opacity-40
-                        
+
                         before:absolute before:-top-7
                         before:content-['<p>'] before:-left-3
                         before:text-sm before:opacity-40

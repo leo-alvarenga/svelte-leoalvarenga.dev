@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { Experience } from "$lib";
+	import { faAngleDown, faArrowUpRightFromSquare, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+	import Fa from "svelte-fa";
 
     export let xp: Experience;
     export let selected = false;
@@ -8,7 +10,7 @@
 <div
     class={`
         flex flex-col items-start
-        w-full border-[1px] p-4
+        w-full border p-4
         border-text rounded
         relative before:absolute
         before:top-[50%] before:-left-9
@@ -20,7 +22,15 @@
         <h3><span class="font-bold">{xp.name}</span>{` @ ${xp.place.name}`}</h3>
 
         <span class="ml-auto italic">{xp.time}</span>
-        <button on:click class={selected ? 'transform -rotate-90' : ''}>v</button>
+        <button 
+            on:click
+            class={`
+                transition-all duration-500 transform
+                ${selected ? '-rotate-90' : 'rotate-0'}
+            `}
+        >
+            <Fa icon={faAngleDown} />
+        </button>
     </div>
 
     <div
@@ -32,10 +42,14 @@
         `}
     >
         <div class="flex flex-col items-start w-[90%] gap-4">
-            <span class="opacity-60 w-full">
-                {xp.place.location}
-                <a href={xp.place.page}>
+            <span class="opacity-60 w-full flex flex-col lg:flex-row gap-2">
+                <span class="flex flex-row gap-2 items-center">
+                    <Fa icon={faLocationDot} />
+                    {xp.place.location}
+                </span>
+                <a class="flex flex-row gap-1 items-center italic" href={xp.place.page}>
                     {xp.place.page.split('//')[1]}
+                    <Fa icon={faArrowUpRightFromSquare} />
                 </a>
             </span>
             <p>
