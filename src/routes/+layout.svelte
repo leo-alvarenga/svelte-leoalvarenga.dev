@@ -1,6 +1,7 @@
 <script lang="ts">
     import Navbar from "../components/Layout/Navbar/Navbar.svelte";
 	import Footer from "../components/Layout/Footer.svelte";
+    import bgCode from "$lib/assets/bg-code.png";
 	import type { NavbarLink } from "../lib";
 
     import '../app.css';
@@ -30,17 +31,12 @@
 </script>
 
 <svelte:head>
-    <title>This is a title</title>
+    <title>Leonardo Alvarenga - Software Engineer, Frontend Dev</title>
 </svelte:head>
 
 <Navbar {links} />
-<div class="flex flex-col h-full items-center w-[90%] lg:w-[80%] gap-8">
-        <img 
-            class="absolute w-[80%] left-[10%] opacity-60 -z-10 blur-sm"
-            src="https://tamalsen.dev/wp-content/uploads/2021/12/hello-world-html-code-768x384.png"
-            alt="bg-code-img"
-        />
-        <slot></slot>
+<div class="flex flex-col h-full items-center w-[90%] lg:w-[80%] gap-8 my-10 pt-10">
+    <slot></slot>
 </div>
 <Footer />
 
