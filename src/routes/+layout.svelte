@@ -1,7 +1,6 @@
 <script lang="ts">
-    import Navbar from "../components/Layout/Navbar/Navbar.svelte";
+    import Navbar from "../components/Layout/Navbar.svelte";
 	import Footer from "../components/Layout/Footer.svelte";
-    import bgCode from "$lib/assets/bg-code.png";
 	import type { NavbarLink } from "../lib";
 
     import '../app.css';
