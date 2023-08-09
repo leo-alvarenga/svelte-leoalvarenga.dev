@@ -7,7 +7,7 @@
 
 <div
     class={`
-        w-[90%] lg:w-[70%] rounded 
+        w-[70%] lg:w-[55%] rounded 
         border-[1px] border-text 
         border-opacity-40 flex
         flex-row flex-wrap gap-4

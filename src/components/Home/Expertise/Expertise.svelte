@@ -7,7 +7,7 @@
 
 <h1 id="expertise" class="mt-5 lg:mt-20 font-major text-2xl md:text-4xl">Expertise</h1>
 
-<div class="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-0">
+<div class="flex flex-col md:flex-row w-[80%] items-stretch gap-4 md:gap-0">
     {#each expertise as { icon, info, title }}
         <div
             class={`

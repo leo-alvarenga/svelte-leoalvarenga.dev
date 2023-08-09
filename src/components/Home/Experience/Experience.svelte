@@ -29,8 +29,8 @@
 <div
     class={`
         flex flex-col relative
-        items-center w-full
-        md:w-[60%] gap-4 pl-8
+        items-center w-[80%]
+        md:w-[50%] gap-4 pl-8
         before:absolute before:h-full
         before:w-[1px] before:bg-text
         before:opacity-40 before:left-0

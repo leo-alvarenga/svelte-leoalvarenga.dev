@@ -34,7 +34,7 @@
 </svelte:head>
 
 <Navbar {links} />
-<div class="flex flex-col h-full items-center w-[90%] lg:w-[80%] gap-8 my-10 pt-10">
+<div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
     <slot></slot>
 </div>
 <Footer />
