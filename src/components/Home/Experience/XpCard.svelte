@@ -2,6 +2,7 @@
 	import type { Experience } from "$lib";
 	import { faAngleDown, faArrowUpRightFromSquare, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
+	import Link from "../../Link.svelte";
 
     export let xp: Experience;
     export let selected = false;
@@ -47,10 +48,10 @@
                     <Fa icon={faLocationDot} />
                     {xp.place.location}
                 </span>
-                <a class="flex flex-row gap-1 items-center italic" href={xp.place.page}>
+                <Link className="flex flex-row gap-1 items-center italic" href={xp.place.page}>
                     {xp.place.page.split('//')[1]}
                     <Fa icon={faArrowUpRightFromSquare} />
-                </a>
+                </Link>
             </span>
             <p>
                 {xp.info}

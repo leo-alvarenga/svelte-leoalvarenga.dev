@@ -20,11 +20,11 @@
         },
         {
             title: 'Skills',
-            href: '#xp',
+            href: '#skills',
         },
         {
             title: 'Contact',
-            href: '#xp',
+            href: '#contact',
         }
     ];
 </script>
@@ -54,20 +54,5 @@
         color: theme(colors.text);
 
         user-select: none;
-    }
-
-    :global(a, a:visited, a:hover, a:active) {
-        text-decoration: none;
-        cursor: pointer;
-
-        color: theme(colors.text);
-        -webkit-transition: all 550ms ease-out;
-        -moz-transition: all 550ms ease-out;
-        -o-transition: all 550ms ease-out;
-        transition: all 550ms ease-out;
-    }
-
-    :global(a:active, a:hover) {
-        color: theme(colors.primary);
     }
 </style>

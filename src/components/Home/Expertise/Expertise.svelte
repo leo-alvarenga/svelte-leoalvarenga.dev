@@ -3,9 +3,10 @@
     import { faCode, faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
 
     import { expertise } from "$lib";
+	import Header from '../../Header.svelte';
 </script>
 
-<h1 id="expertise" class="mt-5 lg:mt-20 font-major text-2xl md:text-4xl">Expertise</h1>
+<Header id="expertise">Expertise</Header>
 
 <div class="flex flex-col md:flex-row w-[80%] items-stretch gap-4 md:gap-0">
     {#each expertise as { icon, info, title }}

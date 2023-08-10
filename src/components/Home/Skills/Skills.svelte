@@ -1,9 +1,10 @@
 <script>
 
 	import { skills } from "$lib";
+	import Header from "../../Header.svelte";
 
 </script>
-<h1 id="skills" class="mt-5 lg:mt-16 font-major text-2xl md:text-4xl">Skills</h1>
+<Header id="skills">Skills</Header>
 
 <div
     class={`

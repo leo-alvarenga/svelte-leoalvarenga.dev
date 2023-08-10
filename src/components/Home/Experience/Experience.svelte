@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { experience } from "$lib";
+	import Header from "../../Header.svelte";
 	import XpCard from "./XpCard.svelte";
 
     let auto = true;
@@ -24,7 +25,7 @@
     };
 </script>
 
-<h1 id="xp" class="mt-5 lg:mt-16 font-major text-2xl md:text-4xl">Work Experience</h1>
+<Header id="xp">Work Experience</Header>
 
 <div
     class={`

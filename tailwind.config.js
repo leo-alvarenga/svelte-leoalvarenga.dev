@@ -13,6 +13,7 @@ export default {
         background: "#0e141b",
         text: "#f2f5f7",
         textGrey: "#9ca8b4",
+        dark: "#0e0e0e",
         light: "#182635",
         accentPink: "#e60067",
         accentGrey: "#2b333b",
