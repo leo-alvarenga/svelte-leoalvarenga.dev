@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { page } from "$app/stores";
     import Navbar from "../components/Layout/Navbar.svelte";
 	import Footer from "../components/Layout/Footer.svelte";
 	import type { NavbarLink } from "../lib";
@@ -27,17 +28,27 @@
             href: '#contact',
         }
     ];
+
+    const routesWithNoDec = ['/links'];
+
+    $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
 </script>
 
 <svelte:head>
     <title>Leonardo Alvarenga - Software Engineer, Frontend Dev</title>
 </svelte:head>
 
-<Navbar {links} />
+{#if decorationEnabled}
+    <Navbar {links} />
+{/if}
+
 <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
     <slot></slot>
 </div>
-<Footer />
+
+{#if decorationEnabled}
+    <Footer />
+{/if}
 
 <style lang="postcss">
     :global(body) {
