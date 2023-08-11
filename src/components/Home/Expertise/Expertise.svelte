@@ -18,13 +18,7 @@
             `}
         >
             <div class="flex flow-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
-                {#if icon === 'code'}
-                    <Fa icon={faLaptopCode} />
-                {:else if icon === 'frontend'}
-                    <Fa icon={faObjectGroup} />
-                {:else}
-                    <Fa icon={faCode} />
-                {/if}
+                <Fa {icon} />
             
                 <h3 class="text-end">{title}</h3>
             </div>

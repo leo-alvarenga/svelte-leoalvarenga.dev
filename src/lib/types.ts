@@ -1,12 +1,18 @@
+import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+
 export interface NavbarLink {
     title: string;
     href: string;
 }
 
+export interface DecoratedLink extends NavbarLink {
+    icon: IconDefinition;
+}
+
 export interface Expertise {
     title: string;
     info: string;
-    icon: string;
+    icon: IconDefinition;
 }
 
 export interface Experience {
