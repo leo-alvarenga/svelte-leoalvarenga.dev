@@ -1,12 +1,13 @@
 <script lang="ts">
     export let id = '';
+    export let mt = true;
 </script>
 
 <h3
     {id}
     class={`
         custom-header
-        mt-5 lg:mt-20 font-major
+        ${mt ? 'mt-5 lg:mt-20' : ''} font-major
         text-2xl md:text-4xl
         relative font-bold
         before:h-[30%] before:w-full
