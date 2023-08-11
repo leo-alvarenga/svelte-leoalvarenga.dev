@@ -8,8 +8,7 @@
 
 <nav
     class={`
-        w-[100vw] group
-        flex flex-row
+        w-[100vw] flex flex-row
         list-none gap-4
         justify-between text-xs
         m-0 p-2 bg-light bg-opacity-40
@@ -36,9 +35,7 @@
     {#each links as { title, href }}
         <a
             class={`
-                transition group-hover:opacity-60
-                hover:animate-nav hover:!opacity-100
-                hover:text-text before:content-['// ']
+                transition hover:animate-nav
             `}
             {href}
         >
