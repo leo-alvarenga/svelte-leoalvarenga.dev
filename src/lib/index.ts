@@ -70,19 +70,16 @@ export const contacts: Contact[] = [
         title: 'Linkedin',
         href: 'https://www.linkedin.com/in/leonardo-a-alvarenga/',
         icon: faLinkedin,
-        bg: 'alt',
     },
     {
         title: 'Github',
         href: 'https://github.com/leo-alvarenga',
         icon: faGithub,
-        bg: 'dark1',
     },
     {
         title: 'Email me',
         href: 'mailto:leonardo.a.alvarenga@gmail.com',
         icon: faEnvelope,
-        bg: 'dark2',
     }
 ];
 
@@ -91,7 +88,6 @@ export const contactsForLinkPage: Contact[] = [
         title: 'Portfolio',
         href: `/`,
         icon: faArrowUpRightFromSquare,
-        bg: 'default',
     },
     ...contacts,
 ];

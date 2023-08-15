@@ -5,7 +5,6 @@
 	import Header from "../../Header.svelte";
     import Subheader from "../../Subheader.svelte";
 	import Link from "../../Link.svelte";
-	import ContactCard from "./ContactCard.svelte";
 	import Profile from "./Profile.svelte";
 </script>
 

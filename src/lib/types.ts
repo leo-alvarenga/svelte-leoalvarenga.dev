@@ -1,5 +1,7 @@
 import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
+export type LinkStyleMode = 'default' | 'alt' | 'dark1' | 'dark2';
+
 export interface NavbarLink {
     title: string;
     href: string;
@@ -27,3 +29,5 @@ export interface Experience {
         location: string;
     };
 }
+
+export type Contact = DecoratedLink;
