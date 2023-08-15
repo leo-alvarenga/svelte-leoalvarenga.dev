@@ -12,7 +12,8 @@
         transition-all duration-500 before:h-[10%]
         before:w-full before:absolute
         before:left-0 before:bottom-0
-        before:bg-primary before:-z-10
+        before:-z-[1] before:bg-gradient-to-r
+        before:from-primary before:to-blueLight
         before:transition-all before:duration-500
         ${className}
     `}

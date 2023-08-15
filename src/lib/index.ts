@@ -1,7 +1,7 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
-import type { DecoratedLink, Experience, Expertise } from './types';
+import type { Contact, Experience, Expertise } from './types';
 
 export * from './types';
 
@@ -65,25 +65,33 @@ export const experience: Experience[] = [
     }
 ];
 
-export const contacts: DecoratedLink[] = [
-    {
-        title: 'Portfolio',
-        href: `/`,
-        icon: faArrowUpRightFromSquare,
-    },
+export const contacts: Contact[] = [
     {
         title: 'Linkedin',
         href: 'https://www.linkedin.com/in/leonardo-a-alvarenga/',
         icon: faLinkedin,
+        bg: 'alt',
     },
     {
         title: 'Github',
         href: 'https://github.com/leo-alvarenga',
         icon: faGithub,
+        bg: 'dark1',
     },
     {
         title: 'Email me',
         href: 'mailto:leonardo.a.alvarenga@gmail.com',
         icon: faEnvelope,
+        bg: 'dark2',
     }
+];
+
+export const contactsForLinkPage: Contact[] = [
+    {
+        title: 'Portfolio',
+        href: `/`,
+        icon: faArrowUpRightFromSquare,
+        bg: 'default',
+    },
+    ...contacts,
 ];
