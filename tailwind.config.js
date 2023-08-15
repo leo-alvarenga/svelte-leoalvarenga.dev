@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  important: true,
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
@@ -28,6 +27,8 @@ export default {
       animation: {
         brand: 'glitch1 0.8s ease-out',
         nav: 'glitch2 1s infinite',
+        blob: 'blob1 5s linear infinite alternate',
+        blobAlt: 'blob2 6s linear infinite alternate'
       },
       keyframes: {
         glitch1: {
@@ -71,7 +72,25 @@ export default {
             textShadow: '0.5rem 0.125rem #ff0a78, -1rem -0.5rem #4a67f7',
             color: '#f2f5f7 !importante',
           }
-        }
+        },
+
+        blob1: {
+          '0%': {
+            borderRadius: '30% 70% 70% 30% / 69% 30% 70% 31%'
+          },
+          '100%': {
+            borderRadius: '53% 47% 40% 60% / 48% 59% 41% 52%'
+          }
+        },
+
+        blob2: {
+          '0%': {
+            borderRadius: '53% 47% 40% 60% / 48% 59% 41% 52%'
+          },
+          '100%': {
+            borderRadius: '30% 70% 70% 30% / 69% 30% 70% 31%'
+          }
+        },
       },
     },
   },
