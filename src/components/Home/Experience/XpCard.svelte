@@ -18,20 +18,23 @@
         before:rounded-full before:w-2
         before:h-2 before:bg-primary
     `}
+    on:click
+    on:keypress
+    role="button"
+    tabindex="0"
 >
-    <div class="flex flex-row gap-4 w-full text-lg">
+    <div class="flex flex-row gap-4 w-full text-lg items-center">
         <h3><span class="font-bold">{xp.name}</span>{` @ ${xp.place.name}`}</h3>
 
         <span class="ml-auto italic">{xp.time}</span>
-        <button 
-            on:click
+        <Fa
             class={`
+                w-fit
                 transition-all duration-500 transform
                 ${selected ? '-rotate-90' : 'rotate-0'}
             `}
-        >
-            <Fa icon={faAngleDown} />
-        </button>
+            icon={faAngleDown}
+        />
     </div>
 
     <div
