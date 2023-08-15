@@ -3,26 +3,11 @@
 	import Header from "../../Header.svelte";
 	import XpCard from "./XpCard.svelte";
 
-    let auto = true;
     let current = 0;
-    let timer: NodeJS.Timeout | undefined = undefined;
 
     function handleClick(n: number) {
-        auto = false;
         current = current === n ? -1 : n;
     }
-
-    $: {
-        if (timer) clearTimeout(timer);
-        if (auto) timer = setTimeout(() => {
-            if (current === experience.length - 1) {
-                current = 0;
-                return;
-            }
-
-            current = current + 1;
-        }, 8000);
-    };
 </script>
 
 <Header id="xp">Work Experience</Header>
