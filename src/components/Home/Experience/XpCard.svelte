@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Experience } from "$lib";
+	import { skillClass, type Experience } from "$lib";
 	import { faAngleDown, faArrowUpRightFromSquare, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 	import Link from "../../Link.svelte";
@@ -18,18 +18,13 @@
         before:rounded-full before:w-2
         before:h-2 before:bg-primary
     `}
-    on:click
-    on:keypress
-    role="button"
-    tabindex="0"
 >
-    <div class="flex flex-row gap-4 w-full text-lg items-center">
+    <div class="flex flex-row gap-4 w-full text-lg items-center" on:click on:keypress role="button" tabindex="0">
         <h3><span class="font-bold">{xp.name}</span>{` @ ${xp.place.name}`}</h3>
 
         <span class="ml-auto italic">{xp.time}</span>
         <Fa
             class={`
-                w-fit
                 transition-all duration-500 transform
                 ${selected ? '-rotate-90' : 'rotate-0'}
             `}
@@ -48,7 +43,7 @@
         <div class="flex flex-col items-start w-[90%] gap-4">
             <span class="opacity-60 w-full flex flex-col lg:flex-row gap-2">
                 <span class="flex flex-row gap-2 items-center">
-                    <Fa icon={faLocationDot} />
+                    <Fa class="text-primary" icon={faLocationDot} />
                     {xp.place.location}
                 </span>
                 <Link className="flex flex-row gap-1 items-center italic" href={xp.place.page}>
@@ -62,11 +57,7 @@
             <div class="flex flex-row flex-wrap overflow-hidden w-full gap-2">
                 {#each xp.stack as tech}
                     <span
-                        class={`
-                            p-2 rounded 
-                            border-[1px] border-primary 
-                            border-opacity-60
-                        `}
+                        class={skillClass}
                     >
                         {tech}
                     </span>

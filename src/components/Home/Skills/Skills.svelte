@@ -1,6 +1,6 @@
 <script>
 
-	import { skills } from "$lib";
+	import { skillClass, skills } from "$lib";
 	import Header from "../../Header.svelte";
 
 </script>
@@ -16,6 +16,6 @@
     `}
 >
     {#each skills as s}
-        <span class="p-2 rounded border-[1px] border-primary border-opacity-40">{s}</span>
+        <span class={skillClass}>{s}</span>
     {/each}
 </div>

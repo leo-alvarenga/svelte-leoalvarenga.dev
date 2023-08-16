@@ -3,6 +3,7 @@ import { faArrowUpRightFromSquare, faEnvelope } from '@fortawesome/free-solid-sv
 import { faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
 import type { Contact, Experience, Expertise } from './types';
 
+export * from './classes';
 export * from './types';
 
 export const skills = [
