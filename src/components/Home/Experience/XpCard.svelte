@@ -19,7 +19,13 @@
         before:h-2 before:bg-primary
     `}
 >
-    <div class="flex flex-row gap-4 w-full text-lg items-center" on:click on:keypress role="button" tabindex="0">
+    <div
+        class="flex flex-row gap-4 w-full text-lg items-center"
+        role="button"
+        tabindex="0"
+        on:keypress
+        on:click
+    >
         <h3><span class="font-bold">{xp.name}</span>{` @ ${xp.place.name}`}</h3>
 
         <span class="ml-auto italic">{xp.time}</span>
