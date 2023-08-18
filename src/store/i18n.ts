@@ -3,7 +3,7 @@ import pt from '../config/i18n/pt_BR.json';
 
 type LocaleObj = Record<string, string | undefined>;
 
-const availableLocales = ['en', 'pt'];
+export const availableLocales = ['en', 'pt'];
 
 const data: Record<string, LocaleObj> = { 
     'pt': pt as LocaleObj,
@@ -12,7 +12,7 @@ const data: Record<string, LocaleObj> = {
 
 const fallback = '';
 
-const locale = writable('en');
+export const locale = writable('en');
 
 function getTranslation(locale: string, key: string, values: Record<string, string>) {
     if (!locale || !key || !availableLocales.includes(locale) || !data[locale]) {
@@ -39,3 +39,5 @@ function getTranslation(locale: string, key: string, values: Record<string, stri
 export const t = derived(locale, ($locale) => (key: string, vars: Record<string, string> = {}) =>
     getTranslation($locale, key, vars)
 );
+
+export const setLocale = (l: string) => locale.set(availableLocales.includes(l) ? l : availableLocales[0]);
