@@ -1,7 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import Navbar from "../components/Layout/Navbar.svelte";
 	import Footer from "../components/Layout/Footer.svelte";
+    import Navbar from "../components/Layout/Navbar.svelte";
+	import LocaleSelector from "../components/Layout/LocaleSelector.svelte";
 	import type { NavbarLink } from "../lib";
 
     import '../app.css';
@@ -38,16 +39,20 @@
     <title>Leonardo Alvarenga - Software Engineer, Frontend Dev</title>
 </svelte:head>
 
+<LocaleSelector />
+
 {#if decorationEnabled}
     <Navbar {links} />
-{/if}
-
-<div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
-    <slot></slot>
-</div>
-
-{#if decorationEnabled}
+    
+    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
+        <slot></slot>
+    </div>
+    
     <Footer />
+{:else}
+    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
+        <slot></slot>
+    </div>
 {/if}
 
 <style lang="postcss">
