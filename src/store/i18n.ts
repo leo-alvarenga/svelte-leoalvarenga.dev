@@ -10,19 +10,17 @@ const data: Record<string, LocaleObj> = {
     'en': pt as LocaleObj,
 };
 
-const fallback = '';
-
 export const locale = writable('en');
 
 function getTranslation(locale: string, key: string, values: Record<string, string>) {
     if (!locale || !key || !availableLocales.includes(locale) || !data[locale]) {
         console.error(`Error while getting translation for: { locale: ${locale} key: ${key} }`);
         
-        return fallback;
+        return key;
     }
     
     let raw = data[locale][key];
-    if (!raw) return '';
+    if (raw === undefined) return key;
 
     const toReplace = Object.keys(values);
 

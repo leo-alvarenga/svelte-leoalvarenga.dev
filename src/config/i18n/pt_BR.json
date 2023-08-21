@@ -1,4 +1,28 @@
 {
     "test": "Hello World!",
-    "title.subheader": "Trainee Software Engineer, FullStack "
+    "layout.navbar.item.home": "Home",
+    "layout.navbar.item.experience": "Experience",
+    "layout.navbar.item.projects": "Projects",
+    "layout.navbar.item.skills": "Skills",
+    "layout.navbar.item.contact": "Contact",
+    "layout.footer.text": "Built with ❤️, using SvelteKit and TailwindCSS",
+    
+    "section.titleArea.subheader": "Trainee Software Engineer, FullStack",
+
+    "section.expertise.title": "Expertise",
+    "data.expertise.software.title": "Software development",
+    "data.expertise.software.info": "Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript",
+    "data.expertise.frontend.title": "Frontend Dev React, Svelte",
+    "data.expertise.frontend.info": "Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte, SvelteKit",
+
+    "section.experience.title": "Work Experience",
+    "data.experience.vetta.traineeFrontend.name": "Trainee Software Developer",
+    "data.experience.vetta.traineeFrontend.info": "a",
+    "data.experience.vetta.internFrontend.name": "Intern Software Developer",
+    "data.experience.vetta.internFrontend.info": "",
+    "data.experience.vetta.internDevOps.name": "Intern DevOps Engineer",
+    "data.experience.vetta.internDevOps.info": "",
+
+    "section.skills.title": "Skills",
+    "section.contact.title": "Contact me!"
 }
