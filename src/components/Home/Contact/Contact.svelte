@@ -1,14 +1,16 @@
 <script>
-    import { contacts } from "$lib";
 	import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
+    
+    import { contacts } from "$lib";
+    import { t } from '../../../store';
 	import Header from "../../Header.svelte";
     import Subheader from "../../Subheader.svelte";
 	import Link from "../../Link.svelte";
 	import Profile from "./Profile.svelte";
 </script>
 
-<Header id="contact">Contact me!</Header>
+<Header id="contact">{$t('section.contact.title')}</Header>
 
 <Profile />
 

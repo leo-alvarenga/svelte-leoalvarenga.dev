@@ -3,34 +3,9 @@
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
 	import LocaleSelector from "../components/Layout/LocaleSelector.svelte";
-	import type { NavbarLink } from "../lib";
+	import { links, routesWithNoDec } from "../lib";
 
     import '../app.css';
-
-    const links: NavbarLink[] = [
-        {
-            title: 'Home',
-            href: '/',
-        },
-        {
-            title: 'Expertise',
-            href: '#expertise',
-        },
-        {
-            title: 'Experience',
-            href: '#xp',
-        },
-        {
-            title: 'Skills',
-            href: '#skills',
-        },
-        {
-            title: 'Contact',
-            href: '#contact',
-        }
-    ];
-
-    const routesWithNoDec = ['/links'];
 
     $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
 </script>

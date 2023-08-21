@@ -1,12 +1,12 @@
 <script lang="ts">
     import Fa from 'svelte-fa';
-    import { faCode, faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
 
     import { expertise } from "$lib";
+    import { t } from '../../../store';
 	import Header from '../../Header.svelte';
 </script>
 
-<Header id="expertise">Expertise</Header>
+<Header id="expertise">{$t('section.expertise.title')}</Header>
 
 <div class="flex flex-col md:flex-row w-[80%] items-stretch gap-4 md:gap-0">
     {#each expertise as { icon, info, title }}
@@ -20,7 +20,7 @@
             <div class="flex flow-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
                 <Fa {icon} />
             
-                <h3 class="text-end">{title}</h3>
+                <h3 class="text-end">{$t(title)}</h3>
             </div>
             <div class="flex flex-col text-right pl-4">
                 <p
@@ -39,7 +39,7 @@
                         after:text-sm after:opacity-40
                     `}
                 >
-                    {info}
+                    {$t(info)}
                 </p>
             </div>
         </div>

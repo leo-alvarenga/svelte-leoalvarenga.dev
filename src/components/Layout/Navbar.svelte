@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { NavbarLink } from "$lib/types";
+    import { t } from "../../store";
 
     export let links: NavbarLink[] = [];
 
-    const fmtLinkTitle = (link: string) => (`${link.toLowerCase()}_`);
+    const fmtLinkTitle = (link: string) => (`${$t(link).toLowerCase()}_`);
 </script>
 
 <nav

@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { skillClass, type Experience } from "$lib";
-	import { faAngleDown, faArrowUpRightFromSquare, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+    import { faAngleDown, faArrowUpRightFromSquare, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
+    
+	import { skillClass, type Experience } from "$lib";
+    import { t } from "../../../store";
 	import Link from "../../Link.svelte";
 
     export let xp: Experience;
@@ -26,7 +28,7 @@
         on:keypress
         on:click
     >
-        <h3><span class="font-bold">{xp.name}</span>{` @ ${xp.place.name}`}</h3>
+        <h3><span class="font-bold">{$t(xp.name)}</span>{` @ ${$t(xp.place.name)}`}</h3>
 
         <span class="ml-auto italic">{xp.time}</span>
         <Fa
@@ -50,7 +52,7 @@
             <span class="opacity-60 w-full flex flex-col lg:flex-row gap-2">
                 <span class="flex flex-row gap-2 items-center">
                     <Fa class="text-primary" icon={faLocationDot} />
-                    {xp.place.location}
+                    {$t(xp.place.location)}
                 </span>
                 <Link className="flex flex-row gap-1 items-center italic" href={xp.place.page}>
                     {xp.place.page.split('//')[1]}
@@ -58,7 +60,7 @@
                 </Link>
             </span>
             <p>
-                {xp.info}
+                {$t(xp.info)}
             </p>
             <div class="flex flex-row flex-wrap overflow-hidden w-full gap-2">
                 {#each xp.stack as tech}

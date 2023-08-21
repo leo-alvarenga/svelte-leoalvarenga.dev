@@ -1,10 +1,11 @@
 <script>
 
 	import { skillClass, skills } from "$lib";
+    import { t } from "../../../store";
 	import Header from "../../Header.svelte";
 
 </script>
-<Header id="skills">Skills</Header>
+<Header id="skills">{$t('section.skills.title')}</Header>
 
 <div
     class={`

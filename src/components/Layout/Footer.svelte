@@ -1,3 +1,7 @@
+<script lang="ts">
+    import { t } from "../../store";
+</script>
+
 <footer
     class={`
         mt-auto relative
@@ -7,5 +11,5 @@
         backdrop-filter backdrop-blur-lg
     `}
 >
-    <h4>Built with ❤️, using SvelteKit and TailwindCSS</h4>
+    <h4>{$t('layout.footer.text')}</h4>
 </footer>

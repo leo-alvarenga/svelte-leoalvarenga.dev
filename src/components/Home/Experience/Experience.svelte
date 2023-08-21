@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { experience } from "$lib";
+    import { t } from "../../../store";
 	import Header from "../../Header.svelte";
 	import XpCard from "./XpCard.svelte";
 
@@ -10,7 +11,7 @@
     }
 </script>
 
-<Header id="xp">Work Experience</Header>
+<Header id="xp">{$t('section.experience.title')}</Header>
 
 <div
     class={`
