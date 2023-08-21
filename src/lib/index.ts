@@ -1,10 +1,35 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
-import type { Contact, Experience, Expertise } from './types';
+import type { Contact, Experience, Expertise, NavbarLink } from './types';
 
 export * from './classes';
 export * from './types';
+
+export const links: NavbarLink[] = [
+    {
+        title: 'layout.navbar.item.home',
+        href: '/',
+    },
+    {
+        title: 'layout.navbar.item.experience',
+        href: '#xp',
+    },
+    {
+        title: 'layout.navbar.item.projects',
+        href: '#projects',
+    },
+    {
+        title: 'layout.navbar.item.skills',
+        href: '#skills',
+    },
+    {
+        title: 'layout.navbar.item.contact',
+        href: '#contact',
+    }
+];
+
+export const routesWithNoDec = ['/links'];
 
 export const skills = [
     'HTML', 'CSS', 'JavaScript',
@@ -16,22 +41,22 @@ export const skills = [
 
 export const expertise: Expertise[] = [
     {
-        title: 'Software development',
-        info: 'Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript',
+        title: 'data.expertise.software.title',
+        info: 'data.expertise.software.info',
         icon: faLaptopCode,
     },
     {
-        title: 'Frontend Dev React, Svelte',
-        info: 'Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte, SvelteKit',
+        title: 'data.expertise.frontend.title',
+        info: 'data.expertise.frontend.info',
         icon: faObjectGroup,
     }
 ];
 
 export const experience: Experience[] = [
     {
-        name: 'Trainee Software Developer',
+        name: 'data.experience.vetta.traineeFrontend.name',
         time: '2023, Mar - current',
-        info: '',
+        info: 'data.experience.vetta.traineeFrontend.info',
         stack: ['TypeScript', 'React', 'styled-components', 'Postgresql', 'Bash'],
         place: {
             name: 'Vetta',
@@ -41,9 +66,9 @@ export const experience: Experience[] = [
         },
     },
     {
-        name: 'Intern Software Developer',
+        name: 'data.experience.vetta.internFrontend.name',
         time: '2022, Oct - 2023, Mar',
-        info: 'Lorem',
+        info: 'data.experience.vetta.internFrontend.info',
         stack: ['TypeScript', 'React', 'styled-components', 'Postgresql', 'Bash'],
         place: {
             name: 'Vetta',
@@ -53,9 +78,9 @@ export const experience: Experience[] = [
         },
     },
     {
-        name: 'Intern DevOps Engineer',
+        name: 'data.experience.vetta.internDevOps.name',
         time: '2022, Mar - 2022, Oct',
-        info: 'Lorem',
+        info: 'data.experience.vetta.internDevOps.info',
         stack: ['Bash', 'Linux', 'Docker', 'Kubernetes', 'Azure DevOps'],
         place: {
             name: 'Vetta',
@@ -78,7 +103,7 @@ export const contacts: Contact[] = [
         icon: faGithub,
     },
     {
-        title: 'Email me',
+        title: 'Email',
         href: 'mailto:leonardo.a.alvarenga@gmail.com',
         icon: faEnvelope,
     }
