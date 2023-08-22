@@ -30,7 +30,7 @@
     >
         <h3><span class="font-bold">{$t(xp.name)}</span>{` @ ${$t(xp.place.name)}`}</h3>
 
-        <span class="ml-auto italic">{xp.time}</span>
+        <span class="ml-auto italic min-w-fit">{xp.time}</span>
         <Fa
             class={`
                 transition-all duration-500 transform
