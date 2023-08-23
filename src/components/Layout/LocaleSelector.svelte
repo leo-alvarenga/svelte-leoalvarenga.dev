@@ -24,7 +24,7 @@
         flex flex-col items-center
     `}
 >
-    <button class="flex flex-row gap-2 items-center transition-all duration-500 hover:opacity-40" on:click={toogleVisibility}>
+    <button class="w-full justify-center flex flex-row gap-2 items-center transition-all duration-500 hover:opacity-40" on:click={toogleVisibility}>
         <Fa class="text-xl" icon={showOptions ? faXmark : faLanguage} />
     </button>
     <div
