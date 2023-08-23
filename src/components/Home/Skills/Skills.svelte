@@ -1,8 +1,9 @@
 <script>
 
-	import { skillClass, skills } from "$lib";
+	import { skills } from "$lib";
     import { t } from "../../../store";
 	import Header from "../../Header.svelte";
+	import Tag from "../../Tag.svelte";
 
 </script>
 <Header id="skills">{$t('section.skills.title')}</Header>
@@ -17,6 +18,6 @@
     `}
 >
     {#each skills as s}
-        <span class={skillClass}>{s}</span>
+        <Tag>{s}</Tag>
     {/each}
 </div>

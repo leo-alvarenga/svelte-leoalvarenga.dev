@@ -1,9 +1,8 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLaptopCode, faObjectGroup } from '@fortawesome/free-solid-svg-icons'
-import type { Contact, Experience, Expertise, NavbarLink } from './types';
+import type { Contact, Experience, Expertise, NavbarLink, Project } from './types';
 
-export * from './classes';
 export * from './types';
 
 export const links: NavbarLink[] = [
@@ -88,6 +87,18 @@ export const experience: Experience[] = [
             icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
             location: 'Belo Horizonte, Brazil',
         },
+    },
+    {
+        name: 'data.experience.ufv.ic.title',
+        time: '2021, Oct - 2022, Sep',
+        info: 'data.experience.ufv.ic.info',
+        stack: ['Bash', 'Linux', 'Docker', 'Kubernetes', 'Azure DevOps'],
+        place: {
+            name: 'UFV',
+            page: 'https://vetta.digital',
+            icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
+            location: 'Florestal, Brazil',
+        },
     }
 ];
 
@@ -117,3 +128,49 @@ export const contactsForLinkPage: Contact[] = [
     },
     ...contacts,
 ];
+
+export const projectTypes = {
+    frontend: 'data.projects.type.frontend',
+    cli: 'dick',
+};
+
+export const projects: Project[] = [
+    {
+        title: 'Test 1',
+        info: 'a test',
+        type: projectTypes.frontend,
+        stack: ['java', 'BrainFuck'],
+    },
+    {
+        title: 'Test 2',
+        info: 'a test',
+        type: projectTypes.cli,
+        stack: ['C', 'Dick'],
+    },
+    {
+        title: 'Test 3',
+        info: 'a test',
+        type: projectTypes.frontend,
+        stack: ['js', 'ts'],
+    },
+    {
+        title: 'Test 4',
+        info: 'a test',
+        type: projectTypes.cli,
+        stack: ['C', 'Dick'],
+    },
+    {
+        title: 'Test 5',
+        info: 'a test',
+        type: projectTypes.frontend,
+        stack: ['js', 'ts'],
+    }
+];
+
+export const projectTypesList = Object.values(projectTypes);
+
+export const getOccurrencesOfType = (t: string) => (
+    projects.reduce<number>(
+        (acc, { type }) => t === type ? acc + 1 : acc, 0
+    )
+);

@@ -31,3 +31,12 @@ export interface Experience {
 }
 
 export type Contact = DecoratedLink;
+
+export interface Project {
+    type: string;
+    info: string;
+    repo?: string;
+    title: string;
+    stack: string[];
+    thumbnail?: string
+}
