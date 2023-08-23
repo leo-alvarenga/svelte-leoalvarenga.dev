@@ -33,7 +33,7 @@ export interface Experience {
 export type Contact = DecoratedLink;
 
 export interface Project {
-    type: string;
+    tags: string[];
     info: string;
     repo?: string;
     title: string;
