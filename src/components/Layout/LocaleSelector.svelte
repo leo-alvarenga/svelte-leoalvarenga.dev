@@ -19,7 +19,7 @@
     class={`
         bg-dark p-2 w-fit
         border border-primary
-        rounded-md
+        rounded-md text-sm
         fixed bottom-5 left-5 z-20
         flex flex-col items-center
     `}
