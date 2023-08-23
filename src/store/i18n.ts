@@ -3,6 +3,8 @@ import pt from '../config/i18n/pt_BR.json';
 
 type LocaleObj = Record<string, string | undefined>;
 
+const localeLocalStorageKey = 'i18n';
+
 export const availableLocales = ['en', 'pt'];
 
 const data: Record<string, LocaleObj> = { 
@@ -38,4 +40,24 @@ export const t = derived(locale, ($locale) => (key: string, vars: Record<string,
     getTranslation($locale, key, vars)
 );
 
-export const setLocale = (l: string) => locale.set(availableLocales.includes(l) ? l : availableLocales[0]);
+export const getLocaleFromLocalStorage = () => {
+    const val = localStorage.getItem(localeLocalStorageKey);
+
+    if (!val) {
+        console.error('Could not retrieve language from localStorage. Defaulted to', availableLocales[0]);
+    }
+
+    return val || availableLocales[0];
+};
+
+export const setLocale = (l: string) => {
+    const lang = availableLocales.includes(l) ? l : availableLocales[0];
+
+    locale.set(lang);
+
+    try {
+        localStorage.setItem(localeLocalStorageKey, lang);
+    } catch (e) {
+        console.error(e, 'Error while saving the choosen language to localStorage');
+    }
+}

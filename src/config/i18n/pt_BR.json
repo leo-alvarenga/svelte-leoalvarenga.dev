@@ -7,6 +7,10 @@
     "common.notFound": "Not found",
     "common.inProgress": "In progress",
 
+    "common.language": "Language",
+    "common.language.pt": "Portugues",
+    "common.language.en": "English",
+
     "layout.navbar.item.home": "Home",
     "layout.navbar.item.experience": "Experience",
     "layout.navbar.item.projects": "Projects",

@@ -1,11 +1,18 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+    
     import { page } from "$app/stores";
+	import { links, routesWithNoDec } from "$lib";
+	import { getLocaleFromLocalStorage, setLocale } from "../store";
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
 	import LocaleSelector from "../components/Layout/LocaleSelector.svelte";
-	import { links, routesWithNoDec } from "../lib";
 
     import '../app.css';
+
+    onMount(() => {
+        setLocale(getLocaleFromLocalStorage());
+    });
 
     $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
 </script>
