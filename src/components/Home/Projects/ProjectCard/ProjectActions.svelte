@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faArrowUpRightFromSquare, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+	import { faArrowUpRightFromSquare, faCodeBranch, faKey } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 	import { t } from "../../../../store";
 	import Link from "../../../Link.svelte";
@@ -21,12 +21,20 @@
                 <Fa icon={faArrowUpRightFromSquare} />
             </Link>
         {/if}
-        <Link 
-            className={`${commonClasses} p-1`}
-            href={repo}
-        >
-            {$t('common.repo')}
-            <Fa icon={faCodeBranch} />
-        </Link>
+
+        {#if !repo}
+            <Link 
+                className={`${commonClasses} p-1`}
+                href={repo}
+            >
+                {$t('common.repo')}
+                <Fa icon={faCodeBranch} />
+            </Link>
+        {:else}
+            <span class={`${commonClasses} px-2 py-1 rounded-md border opacity-40`}>
+                {$t('common.privateRepo')}
+                <Fa icon={faKey} />
+            </span>
+        {/if}
     </div>
 </div>

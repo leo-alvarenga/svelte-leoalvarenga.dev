@@ -9,7 +9,7 @@
 
     export let index: number;
     export let project: Project;
-    let { thumbnail, title, inProgress, info, type, stack, preview, repo } = project;
+    let { thumbnail, title, inProgress, info, tags, stack, preview, repo } = project;
 
     $: span = index > 0 && index % 3 === 0 ? 'md:row-span-2' : '';
 </script>
@@ -24,9 +24,8 @@
         hover:border-primary
     `}
 >
-    <ProjectDecorator {inProgress} {type} />
+    <ProjectDecorator {inProgress} {tags} />
 
-    
     <span class={`${thumbnail ? '' : 'relative'} h-36 overflow-hidden rounded-md`}>
         <img
             alt={title}

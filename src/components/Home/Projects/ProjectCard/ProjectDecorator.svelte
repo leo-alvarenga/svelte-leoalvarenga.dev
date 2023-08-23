@@ -3,8 +3,11 @@
 	import Fa from "svelte-fa";
 	import { t } from "../../../../store";
 
-    export let type: string;
+    export let tags: string[];
     export let inProgress: boolean | undefined = false;
+
+    $: hasTooManyTags = tags.length > 3;
+    $: slicedTags = hasTooManyTags ? [...tags.slice(3), '...'] : tags;
 </script>
 
 <div
@@ -18,17 +21,18 @@
         flex flex-row items-center
     `}
 >
-    <h5
-        class={`
-            px-2 py-1
-            ${inProgress
-                ? 'border-r group-hover:border-primary transition-all duration-500'
-                : ''
-            }
-        `}
-    >
-        {$t(type)}
-    </h5>
+    {#each slicedTags as tag}
+        <h5
+            class={`
+                px-2 py-1
+                border-r group-hover:border-primary
+                transition-all duration-500
+                ${inProgress ? '' : 'last:border-r-0'}
+            `}
+        >
+            {$t(tag)}
+        </h5>    
+    {/each}
 
     {#if inProgress}
         <span class="flex flex-row px-2 gap-2 items-center">

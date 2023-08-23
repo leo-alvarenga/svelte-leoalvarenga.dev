@@ -7,7 +7,7 @@
 	import FilterArea from "./FilterArea.svelte";
 	import ProjectGrid from "./ProjectGrid.svelte";
 
-    let type = '';
+    let tag = '';
     let searchTerm = '';
     let mapped: Project[] = [];
     let data = mapped;
@@ -25,9 +25,9 @@
         data = mapped;
     });
 
-    function handleFilterChange(value: string, kind: 'search' | 'type') {
-        if (kind === 'type') {
-            type = type === value ? '' : value;
+    function handleFilterChange(value: string, kind: 'search' | 'tag') {
+        if (kind === 'tag') {
+            tag = tag === value ? '' : value;
             
             return;
         }
@@ -39,13 +39,13 @@
         if (reloadTimer) clearTimeout(reloadTimer);
 
         reloadTimer = setTimeout(() => {
-            if (!searchTerm && !type) return data = mapped;
+            if (!searchTerm && !tag) return data = mapped;
 
             busy = true;
             let out = mapped;
 
-            if (type) {
-                out = out.filter(({ type: t }) => t === type);
+            if (tag) {
+                out = out.filter(({ tags }) => tags.includes(tag));
             }
 
             if (searchTerm) {
@@ -65,6 +65,6 @@
 <Header id="projects">{$t('section.projects.title')}</Header>
 
 <div class="flex flex-col items-center w-full lg:w-[90%] p-8 gap-8">
-    <FilterArea {type} {busy} onChange={handleFilterChange} />
+    <FilterArea {tag} {busy} onChange={handleFilterChange} />
     <ProjectGrid {data} />
 </div>
