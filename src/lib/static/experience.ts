@@ -1,5 +1,8 @@
 import type { Experience } from "../types";
 
+import nupessc from '../assets/NuPESSC_logo.png';
+import vetta from '../assets/Vetta_logo.png';
+
 export const experience: Experience[] = [
     {
         name: 'data.experience.vetta.traineeFrontend.name',
@@ -9,7 +12,7 @@ export const experience: Experience[] = [
         place: {
             name: 'Vetta',
             page: 'https://vetta.digital',
-            icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
+            icon: vetta,
             location: 'Belo Horizonte, Brazil',
         },
     },
@@ -21,7 +24,7 @@ export const experience: Experience[] = [
         place: {
             name: 'Vetta',
             page: 'https://vetta.digital',
-            icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
+            icon: vetta,
             location: 'Belo Horizonte, Brazil',
         },
     },
@@ -33,7 +36,7 @@ export const experience: Experience[] = [
         place: {
             name: 'Vetta',
             page: 'https://vetta.digital',
-            icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
+            icon: vetta,
             location: 'Belo Horizonte, Brazil',
         },
     },
@@ -41,11 +44,11 @@ export const experience: Experience[] = [
         name: 'data.experience.ufv.ic.title',
         time: '2021, Oct - 2022, Sep',
         info: 'data.experience.ufv.ic.info',
-        stack: ['Bash', 'Linux', 'Docker', 'Kubernetes', 'Azure DevOps'],
+        stack: ['Firestore', 'Cloud Functions', 'Scrum', 'Agile', 'TypeScript', 'JavaScript'],
         place: {
-            name: 'UFV',
-            page: 'https://vetta.digital',
-            icon: 'https://ugc.production.linktr.ee/XquEozgIRLq7KtRcuWLp_7HZW7Y73e0z92ae3',
+            name: 'UFV (NuPESSC)',
+            page: 'http://nupessc.caf.ufv.br',
+            icon: nupessc,
             location: 'Florestal, Brazil',
         },
     }
