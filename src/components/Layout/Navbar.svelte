@@ -3,8 +3,6 @@
     import { t } from "../../store";
 
     export let links: NavbarLink[] = [];
-
-    const fmtLinkTitle = (link: string) => (`${$t(link).toLowerCase()}_`);
 </script>
 
 <nav
