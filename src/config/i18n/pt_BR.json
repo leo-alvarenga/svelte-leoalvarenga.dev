@@ -1,68 +1,68 @@
 {
-    "test": "Hello World!",
-    "common.all": "All",
-    "common.repo": "Repository",
-    "common.repo.private": "Private repository",
+    "test": "Olá, mundo!",
+    "common.all": "Todos",
+    "common.repo": "Repositório",
+    "common.repo.private": "Repositório privado",
     "common.preview": "Preview",
-    "common.notFound": "Not found",
-    "common.inProgress": "In progress",
+    "common.notFound": "Não encontrado",
+    "common.inProgress": "Em progresso",
 
-    "common.language": "Language",
+    "common.language": "Idioma",
     "common.language.pt": "Português 🇧🇷",
     "common.language.en": "English 🇺🇸",
 
-    "layout.navbar.item.home": "Home",
-    "layout.navbar.item.experience": "Experience",
-    "layout.navbar.item.projects": "Projects",
+    "layout.navbar.item.home": "Início",
+    "layout.navbar.item.experience": "Experiência",
+    "layout.navbar.item.projects": "Projetos",
     "layout.navbar.item.skills": "Skills",
-    "layout.navbar.item.contact": "Contact",
-    "layout.footer.text": "Built with ❤️, using SvelteKit and TailwindCSS",
+    "layout.navbar.item.contact": "Contato",
+    "layout.footer.text": "Feito com ❤️, usando SvelteKit e TailwindCSS",
     
-    "section.titleArea.subheader": "Trainee Software Engineer, FullStack",
+    "section.titleArea.subheader": "Engenheiro de Software Trainee, FullStack",
 
     "section.expertise.title": "Expertise",
-    "data.expertise.software.title": "Software development",
-    "data.expertise.software.info": "Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript",
+    "data.expertise.software.title": "Desenvolvimento de software",
+    "data.expertise.software.info": "Experiência com Programação Funcional e Orientada à Objetos com Go, C, Java, C#, JavaScript e Typescript",
     "data.expertise.frontend.title": "Frontend Dev React, Svelte",
-    "data.expertise.frontend.info": "Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte, SvelteKit",
+    "data.expertise.frontend.info": "Obsecado com desenvolvimento web Frontend moderno. Experiência com HTML, CSS, JS, Typescript, React, Svelte, SvelteKit e outros",
 
 
-    "section.experience.title": "Work Experience",
+    "section.experience.title": "Experiência",
 
-    "data.experience.vetta.traineeFrontend.name": "Trainee Software Developer",
+    "data.experience.vetta.traineeFrontend.name": "Desenvolvedor de Software Trainee",
     "data.experience.vetta.traineeFrontend.info": "",
 
-    "data.experience.vetta.internFrontend.name": "Intern Software Developer",
+    "data.experience.vetta.internFrontend.name": "Desenvolvedor de Software Estagiário",
     "data.experience.vetta.internFrontend.info": "",
 
-    "data.experience.vetta.internDevOps.name": "Intern DevOps Engineer",
+    "data.experience.vetta.internDevOps.name": "Analista DevOps Estagiário",
     "data.experience.vetta.internDevOps.info": "",
 
-    "data.experience.ufv.ic.title": "Scientific Initiation",
-    "data.experience.ufv.ic.info": "Scientific Initiation (Undergraduate Research), occasionally acting as QA Analyst and working mostly in the management, as Scrum Master and PO, and infrastructure, as a mix of DevOps Analyst and DB Admin in a MVP of a web app aimed at providing a virtual laboratory and learning environment developed by the NuPESSC research group",
+    "data.experience.ufv.ic.title": "Iniciação Cientifica",
+    "data.experience.ufv.ic.info": "Iniciação Cientifica, ocasionalmente atuando como Analista de QA e trabalhando majoritariamente na gerência como Scrum Master e PO, e na infraestrutura, como um mix de Analista DevOps Analyst e DB Admin em um MVP de um web app focado em prover laboratórios e ambientes de aprendizado virtuais desenvolvido pelo NuPESSC",
 
     "section.skills.title": "Skills",
-    "section.contact.title": "Contact me!",
+    "section.contact.title": "Entre em contato!",
 
 
-    "section.projects.title": "Projects",
-    "section.projects.filter": "Filter by type",
-    "section.projects.search": "Search by name or technology",
+    "section.projects.title": "Projetos",
+    "section.projects.filter": "Filtre por tag",
+    "section.projects.search": "Pesquise por nome ou tecnologia",
 
     "data.projects.type.cli": "CLI",
     "data.projects.type.frontend": "Frontend",
     "data.projects.type.fullstack": "FullStack",
     "data.projects.type.linux": "Linux",
     
-    "data.projects.crcalc.title": "CR Calculator",
-    "data.projects.crcalc.info": "A simple CR & CRA (brazilian GPA counterpart) calculator",
+    "data.projects.crcalc.title": "Calculadora CR",
+    "data.projects.crcalc.info": "Uma Calculadora de CR (Coeficiente de Rendimento) e CRA (Coeficiente de Rendimento Acumulado)",
 
     "data.projects.dotfiles.title": "Dotfiles",
-    "data.projects.dotfiles.info": "A repo meant to be where I store my config files",
+    "data.projects.dotfiles.info": "Repositório destinado a armazenar meus arquivos de configuração de sistema",
 
     "data.projects.togo.title": "To go",
-    "data.projects.togo.info": "A powerful, lightweight and reliable CLI based to-do tracker capable of serving a web front-end locally",
+    "data.projects.togo.info": "Um app poderoso, leve e confiável baseado em linha de comando para controle de tarefas capaz de servir um front-end web localmente",
 
-    "data.projects.uniguide.title": "Uni. Student Guide",
-    "data.projects.uniguide.info": "A simple MERN stack blog that aims at providing relevant info to uni students"
+    "data.projects.uniguide.title": "Guia do Universitário",
+    "data.projects.uniguide.info": "Um blog simples com foco no auxílio ao estudante universitário contruído com o MERN stack"
 }

@@ -1,0 +1,68 @@
+{
+    "test": "Hello World!",
+    "common.all": "All",
+    "common.repo": "Repository",
+    "common.repo.private": "Private repository",
+    "common.preview": "Preview",
+    "common.notFound": "Not found",
+    "common.inProgress": "In progress",
+
+    "common.language": "Language",
+    "common.language.pt": "Português 🇧🇷",
+    "common.language.en": "English 🇺🇸",
+
+    "layout.navbar.item.home": "Home",
+    "layout.navbar.item.experience": "Experience",
+    "layout.navbar.item.projects": "Projects",
+    "layout.navbar.item.skills": "Skills",
+    "layout.navbar.item.contact": "Contact",
+    "layout.footer.text": "Built with ❤️, using SvelteKit and TailwindCSS",
+    
+    "section.titleArea.subheader": "Trainee Software Engineer, FullStack",
+
+    "section.expertise.title": "Expertise",
+    "data.expertise.software.title": "Software development",
+    "data.expertise.software.info": "Experience with Functional and Object Oriented Programming with Go, C, Java, C#, JavaScript and Typescript",
+    "data.expertise.frontend.title": "Frontend Dev React, Svelte",
+    "data.expertise.frontend.info": "Obscessed over modern Frontend web development. Experience with HTML, CSS, JS, Typescript, React, Svelte, SvelteKit and others",
+
+
+    "section.experience.title": "Work Experience",
+
+    "data.experience.vetta.traineeFrontend.name": "Trainee Software Developer",
+    "data.experience.vetta.traineeFrontend.info": "",
+
+    "data.experience.vetta.internFrontend.name": "Intern Software Developer",
+    "data.experience.vetta.internFrontend.info": "",
+
+    "data.experience.vetta.internDevOps.name": "Intern DevOps Engineer",
+    "data.experience.vetta.internDevOps.info": "",
+
+    "data.experience.ufv.ic.title": "Scientific Initiation",
+    "data.experience.ufv.ic.info": "Scientific Initiation (Undergraduate Research), occasionally acting as QA Analyst and working mostly in the management, as Scrum Master and PO, and infrastructure, as a mix of DevOps Analyst and DB Admin in a MVP of a web app aimed at providing a virtual laboratory and learning environment developed by the NuPESSC research group",
+
+    "section.skills.title": "Skills",
+    "section.contact.title": "Contact me!",
+
+
+    "section.projects.title": "Projects",
+    "section.projects.filter": "Filter by tag",
+    "section.projects.search": "Search by name or technology",
+
+    "data.projects.type.cli": "CLI",
+    "data.projects.type.frontend": "Frontend",
+    "data.projects.type.fullstack": "FullStack",
+    "data.projects.type.linux": "Linux",
+    
+    "data.projects.crcalc.title": "CR Calculator",
+    "data.projects.crcalc.info": "A simple CR & CRA (brazilian GPA counterpart) calculator",
+
+    "data.projects.dotfiles.title": "Dotfiles",
+    "data.projects.dotfiles.info": "A repo meant to be where I store my config files",
+
+    "data.projects.togo.title": "To go",
+    "data.projects.togo.info": "A powerful, lightweight and reliable CLI based to-do tracker capable of serving a web front-end locally",
+
+    "data.projects.uniguide.title": "Uni. Student Guide",
+    "data.projects.uniguide.info": "A simple MERN stack blog that aims at providing relevant info to uni students"
+}

@@ -1,5 +1,6 @@
 import { derived, writable } from "svelte/store";
 import pt from '../config/i18n/pt_BR.json';
+import en from '../config/i18n/en_US.json';
 
 type LocaleObj = Record<string, string | undefined>;
 
@@ -8,8 +9,8 @@ const localeLocalStorageKey = 'i18n';
 export const availableLocales = ['en', 'pt'];
 
 const data: Record<string, LocaleObj> = { 
+    'en': en as LocaleObj,
     'pt': pt as LocaleObj,
-    'en': pt as LocaleObj,
 };
 
 export const locale = writable('en');

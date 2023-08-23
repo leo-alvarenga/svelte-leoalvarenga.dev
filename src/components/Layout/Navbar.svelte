@@ -40,7 +40,7 @@
             `}
             {href}
         >
-            {fmtLinkTitle(title)}
+            {`${$t(title).toLowerCase()}_`}
         </a>
     {/each}
 </nav>
