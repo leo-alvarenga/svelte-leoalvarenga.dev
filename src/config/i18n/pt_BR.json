@@ -44,7 +44,7 @@
     "section.projects.filter": "Filter by type",
     "section.projects.search": "Search by name or technology",
 
-    "data.projects.type.cli": "Terminal-based",
+    "data.projects.type.cli": "CLI",
     "data.projects.type.frontend": "Frontend",
     "data.projects.type.fullstack": "FullStack",
     "data.projects.type.linux": "Linux",

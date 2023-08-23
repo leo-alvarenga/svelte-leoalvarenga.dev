@@ -1,6 +1,6 @@
 <script lang="ts">
     import error404 from '$lib/assets/undraw_404.svg';
-	import type { Project } from "$lib";
+	import type { Project } from '$lib';
 
     import { t } from '../../../store';
     import ProjectCard from "./ProjectCard/ProjectCard.svelte";

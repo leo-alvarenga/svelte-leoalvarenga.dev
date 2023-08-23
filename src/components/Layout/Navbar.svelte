@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NavbarLink } from "$lib/types";
+	import type { NavbarLink } from "$lib";
     import { t } from "../../store";
 
     export let links: NavbarLink[] = [];

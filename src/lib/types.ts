@@ -42,3 +42,5 @@ export interface Project {
     thumbnail?: string;
     inProgress?: boolean;
 }
+
+export {};
