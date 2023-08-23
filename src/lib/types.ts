@@ -38,5 +38,7 @@ export interface Project {
     repo?: string;
     title: string;
     stack: string[];
-    thumbnail?: string
+    preview?: string;
+    thumbnail?: string;
+    inProgress?: boolean;
 }
