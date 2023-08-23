@@ -22,3 +22,5 @@ export const links: NavbarLink[] = [
         href: '#contact',
     }
 ];
+
+export {};
