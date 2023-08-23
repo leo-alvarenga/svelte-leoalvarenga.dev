@@ -1,55 +1,61 @@
 <script lang="ts">
-    import { projectTypes, techInUse } from '$lib';
-	import type { ProjectFilter } from "$lib";
-	import SearchBar from '../../SearchBar.svelte';
-    import Select from '../../Select.svelte';
+	import { faFilter, faFilterCircleXmark } from '@fortawesome/free-solid-svg-icons';
+	import Fa from 'svelte-fa';
 
-    export let onChange = (_: ProjectFilter) => {};
+    import { getOccurrencesOfType, projectTypesList } from '$lib';
+    import { t } from '../../../store';
 
-    let tech: number[] = [];
-    let type: number = -1;
-    
-    export let onSearchTermChange: (val: string) => void;
-    
-    const handleFilterChange = (values: ProjectFilter) => onChange(values);
+    import SearchBar from '../../SearchBar.svelte';
 
-    const handleStackChange = (val: number[]) => {
-        tech = val;
+    export let onChange = (_: string, __: 'search' | 'type') => {};
+    export let type: string;
+    export let busy = false;
 
-        handleFilterChange({
-            stack: val.length ? val.map((i) => techInUse[i]) : undefined,
-            type: type ? projectTypes[type % projectTypes.length] : undefined,
-        });
-    }
-
-    const handleTypeChange = (val: number[]) => {
-        const curr = val.length ? val[0] : -1;
-        type = curr;
-
-        handleFilterChange({
-            stack: tech.length ? tech.map((i) => techInUse[i]) : undefined,
-            type: val.length ? projectTypes[curr % projectTypes.length] : undefined,
-        });
-    }
+    const options = [ 'common.all', ...projectTypesList ];
 </script>
 
-<div class="ml-auto flex flex-row flex-wrap gap-4 items-center justify-stretch">
-    <SearchBar onChange={onSearchTermChange} />
+<div class="w-full flex lg:flex-row flex-col-reverse gap-4 items-center justify-stretch">
+    <div class="w-full flex flex-row flex-wrap gap-4 items-center justify-stretch">
+        <h4 class="text-lg">{$t('section.projects.filter')}</h4>
+    
+        <button
+            on:click={() => type && onChange('', 'type')}
+            class={`
+                -ml-2 hover:opacity-40
+                transition-all duration-500
+            `}
+        >
+            <Fa icon={type ? faFilterCircleXmark : faFilter} />
+        </button>
+        
+        <div class="flex flex-row flex-wrap h-full items-center gap-2">
+            {#each options as _type, index}
+                <button
+                    class={`
+                        flex flex-row gap-1 items-center
+                        h-full hover:opacity-100
+                        transition-all duration-500
+                        ${_type === type || !type && index === 0 ? 'hover:opacity-40' : 'opacity-40'}
+                    `}
+                    on:click={() => onChange(index === 0 ? '' : _type, 'type')}
+                >
+                    {$t(_type)}
+    
+                    {#if index > 0}
+                        <span class="px-1 rounded-md border border-text text-xs">{getOccurrencesOfType(_type)}</span>
+                    {/if}
+    
+                    <span class="ml-1 w-[1px] h-3 rotate-[15deg] bg-text"></span>
+                </button>
+                
+            {/each}
+        </div>
+    </div>
 
-    <Select
-        className="w-[10rem]"
-        title="type..."
-        value={[type]}
-        options={projectTypes}
-        onChange={handleTypeChange}
-    />
-
-    <Select
-        className="w-[10rem]"
-        title="Tech in use"
-        value={tech}
-        options={techInUse}
-        onChange={handleStackChange}
-        multiple
+    <SearchBar
+        className="lg:ml-auto w-full lg:w-[40%]"
+        placeholder="section.projects.search"
+        onChange={(s) => onChange(s, 'search')}
+        {busy}
     />
 </div>
