@@ -22,7 +22,7 @@
             </Link>
         {/if}
 
-        {#if !repo}
+        {#if repo}
             <Link 
                 className={`${commonClasses} p-1`}
                 href={repo}
@@ -32,7 +32,7 @@
             </Link>
         {:else}
             <span class={`${commonClasses} px-2 py-1 rounded-md border opacity-40`}>
-                {$t('common.privateRepo')}
+                {$t('common.repo.private')}
                 <Fa icon={faKey} />
             </span>
         {/if}

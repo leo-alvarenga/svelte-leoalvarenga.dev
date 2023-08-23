@@ -2,6 +2,7 @@
     "test": "Hello World!",
     "common.all": "All",
     "common.repo": "Repository",
+    "common.repo.private": "Private repository",
     "common.preview": "Preview",
     "common.notFound": "Not found",
     "common.inProgress": "In progress",
