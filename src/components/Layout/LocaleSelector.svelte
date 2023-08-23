@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { faAngleUp, faLanguage, faXmark } from "@fortawesome/free-solid-svg-icons";
+    import { faXmark } from "@fortawesome/free-solid-svg-icons";
     import Fa from "svelte-fa";
 
-	import { availableLocales, locale, setLocale } from "../../store";
+	import { availableLocales, locale, setLocale, t } from "../../store";
     
     let showOptions = false;
 
@@ -17,15 +17,19 @@
 
 <div
     class={`
-        bg-dark p-2 w-14
+        bg-dark p-2 w-fit
         border border-primary
         rounded-md
         fixed bottom-5 left-5 z-20
         flex flex-col items-center
     `}
 >
-    <button class="w-full justify-center flex flex-row gap-2 items-center transition-all duration-500 hover:opacity-40" on:click={toogleVisibility}>
-        <Fa class="text-xl" icon={showOptions ? faXmark : faLanguage} />
+    <button class="w-full justify-center flex items-center transition-all duration-500 hover:opacity-40" on:click={toogleVisibility}>
+        {#if showOptions}
+            <Fa class="text-xl" icon={faXmark} />
+        {:else}
+            <span>{$t(`common.language.${$locale}`)}</span>
+        {/if}
     </button>
     <div
         class={`
@@ -47,7 +51,7 @@
                 `}
                 on:click={() => handleLocaleChange(l)}
             >
-                {l.toLowerCase()}
+                {$t(`common.language.${l}`)}
             </button>
         {/each}
     </div>
