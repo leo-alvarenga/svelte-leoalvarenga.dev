@@ -1,10 +1,10 @@
 import type { Project } from "../types";
 
 export const projectTags = {
-    cli: 'data.projects.type.cli',
-    linux: 'data.projects.type.linux',
     frontend: 'data.projects.type.frontend',
     fullstack: 'data.projects.type.fullstack',
+    linux: 'data.projects.type.linux',
+    other: 'common.other',
 };
 
 export const projects: Project[] = [
@@ -25,7 +25,7 @@ export const projects: Project[] = [
       {
         title: 'data.projects.togo.title',
         info: 'data.projects.togo.info',
-        tags: [projectTags.cli],
+        tags: [projectTags.other],
         stack: ['go', 'sqlite', 'html', 'css', 'javascript'],
         repo: 'https://github.com/leo-alvarenga/to-go'
       },
