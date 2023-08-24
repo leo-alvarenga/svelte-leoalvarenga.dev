@@ -48,11 +48,11 @@
             max-h-0 overflow-hidden
             duration-500 transition-all
             ${selected ? 'max-h-[3000px] mt-2' : ''}
-            flex flex-row gap-8 w-full justify-center
+            flex flex-col-reverse lg:flex-row gap-8 w-full
         `}
     >
         <div class="flex flex-col items-start w-auto gap-4">
-            <span class="opacity-60 w-full flex flex-col lg:flex-row gap-2">
+            <span class="opacity-60 w-full flex flex-row flex-wrap gap-2">
                 <span class="flex flex-row gap-2 items-center">
                     <Fa class="text-primary" icon={faLocationDot} />
                     {$t(xp.place.location)}
@@ -72,6 +72,6 @@
             </div>
         </div>
 
-        <img class="w-10 h-10 md:w-20 md:h-20 ml-auto" src={xp.place.icon} alt={`${xp.place.name}'s logo`} />
+        <img class="w-52 h-52 lg:ml-auto" src={xp.place.icon} alt={`${xp.place.name}'s logo`} />
     </div>
 </div>
