@@ -8,7 +8,7 @@
 
 <Header id="expertise">{$t('section.expertise.title')}</Header>
 
-<div class="flex flex-col md:flex-row w-[80%] items-stretch gap-4 md:gap-0">
+<div class="flex flex-col lg:flex-row w-[80%] items-stretch gap-4 md:gap-0">
     {#each expertise as { icon, info, title }}
         <div
             class={`
