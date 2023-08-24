@@ -23,7 +23,7 @@
     `}
 >
     <div
-        class="flex flex-row gap-4 w-full text-lg items-center"
+        class="flex flex-row flex-wrap gap-4 w-full text-lg sm:text-md items-center"
         role="button"
         tabindex="0"
         on:keypress
@@ -31,25 +31,27 @@
     >
         <h3><span class="font-bold">{$t(xp.name)}</span>{` @ ${$t(xp.place.name)}`}</h3>
 
-        <span class="ml-auto italic min-w-fit">{xp.time}</span>
-        <Fa
-            class={`
-                transition-all duration-500 transform
-                ${selected ? '-rotate-90' : 'rotate-0'}
-            `}
-            icon={faAngleDown}
-        />
+        <span class="ml-auto flex flex-row gap-2 items-center w-full md:w-auto">
+            <span class="italic min-w-fit">{xp.time}</span>
+            <Fa
+                class={`
+                    ml-auto transition-all duration-500 transform
+                    ${selected ? '-rotate-90' : 'rotate-0'}
+                `}
+                icon={faAngleDown}
+            />
+        </span>
     </div>
 
     <div
         class={`
             max-h-0 overflow-hidden
             duration-500 transition-all
-            ${selected ? 'max-h-80 mt-2' : ''}
+            ${selected ? 'max-h-[3000px] mt-2' : ''}
             flex flex-row gap-8 w-full justify-center
         `}
     >
-        <div class="flex flex-col items-start w-[90%] gap-4">
+        <div class="flex flex-col items-start w-auto gap-4">
             <span class="opacity-60 w-full flex flex-col lg:flex-row gap-2">
                 <span class="flex flex-row gap-2 items-center">
                     <Fa class="text-primary" icon={faLocationDot} />
@@ -70,6 +72,6 @@
             </div>
         </div>
 
-        <img class="w-20 h-20 ml-auto" src={xp.place.icon} alt={`${xp.place.name}'s logo`} />
+        <img class="w-10 h-10 md:w-20 md:h-20 ml-auto" src={xp.place.icon} alt={`${xp.place.name}'s logo`} />
     </div>
 </div>
