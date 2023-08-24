@@ -18,7 +18,7 @@
 <div
     class={`
         bg-dark p-2 w-fit
-        border border-primary
+        border border-light
         rounded-md text-sm
         fixed bottom-5 left-5 z-20
         flex flex-col items-center
@@ -44,8 +44,8 @@
                 class={`
                     transition-all duration-700
                     ${$locale === l
-                        ? 'border-primary'
-                        : 'border-blueLight border-opacity-20 hover:border-primary'}
+                        ? 'border-blueLight'
+                        : 'border-light border-opacity-20 hover:border-blueLight'}
                     border px-2 py-1
                     rounded-md
                 `}
