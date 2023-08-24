@@ -7,16 +7,17 @@
 	import Header from "../components/Header.svelte";
 	import Subheader from "../components/Subheader.svelte";
 	import Link from "../components/Link.svelte";
+	import { t } from "../store";
 
     $: notFound = $page.status === 404;
 
     $: title = notFound
-        ? '404'
-        : 'Error';
+        ? 'page.error.404.title'
+        : 'page.error.default.title';
 
     $: description = notFound
-        ? 'It seems like this item has not been found'
-        : 'Something unexpected occurred';
+        ? 'page.error.404.subheader'
+        : 'page.error.default.subheader';
 </script>
 
 <img 
@@ -32,7 +33,7 @@
 />
 
 <div class="px-4 w-full flex flex-col items-center gap-4 text-center">
-    <Header mt={false}>{title}</Header>
-    <Subheader>{description}</Subheader>
+    <Header mt={false}>{$t(title)}</Header>
+    <Subheader>{$t(description)}</Subheader>
     <Link href="/" sameTab>Click here to go back</Link>
 </div>

@@ -18,6 +18,13 @@
     "layout.navbar.item.contact": "Contato",
     "layout.footer.text": "Feito com ❤️, usando SvelteKit e TailwindCSS",
     
+    "links.title": "Explore meus link",
+    "page.error.404.title": "404",
+    "page.error.404.subheader": "Parece que o item que você procura não existe",
+
+    "page.error.default.title": "Erro",
+    "page.error.default.subheader": "Algo inesperado ocorreu",
+
     "section.titleArea.subheader": "Engenheiro de Software Trainee, FullStack",
 
     "section.expertise.title": "Expertise",
@@ -25,7 +32,6 @@
     "data.expertise.software.info": "Experiência com Programação Funcional e Orientada à Objetos com Go, C, Java, C#, JavaScript e Typescript",
     "data.expertise.frontend.title": "Frontend Dev React, Svelte",
     "data.expertise.frontend.info": "Obsecado com desenvolvimento web Frontend moderno. Experiência com HTML, CSS, JS, Typescript, React, Svelte, SvelteKit e outros",
-
 
     "section.experience.title": "Experiência",
 

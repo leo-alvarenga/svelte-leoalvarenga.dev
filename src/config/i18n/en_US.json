@@ -17,6 +17,13 @@
     "layout.navbar.item.skills": "Skills",
     "layout.navbar.item.contact": "Contact",
     "layout.footer.text": "Built with ❤️, using SvelteKit and TailwindCSS",
+
+    "links.title": "Explore my links",
+    "page.error.404.title": "404",
+    "page.error.404.subheader": "It seems like this item has not been found",
+
+    "page.error.default.title": "Erro",
+    "page.error.default.subheader": "Something unexpected occurred",
     
     "section.titleArea.subheader": "Trainee Software Engineer, FullStack",
 
