@@ -3,6 +3,8 @@
     
     import { page } from "$app/stores";
 	import { links, routesWithNoDec } from "$lib";
+    import ogImage from '$lib/assets/OpenGraphImage.png';
+    import ogImageSquare from '$lib/assets/OpenGraphImageSquare.png';
 	import { getLocaleFromLocalStorage, setLocale } from "../store";
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
@@ -15,10 +17,24 @@
     });
 
     $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
-</script>
+</script>   
 
 <svelte:head>
     <title>Leonardo Alvarenga - Software Engineer, Frontend Dev</title>
+
+    <meta property="og:title" content="Leonardo Alvarenga's portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leoalvarenga.dev" />
+
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:alt" content="leoalvarenga.dev" />
+
+    <meta property="og:image" content={ogImageSquare} />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="leoalvarenga.dev" />
 </svelte:head>
 
 <LocaleSelector />
