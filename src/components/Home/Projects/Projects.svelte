@@ -64,7 +64,7 @@
 
 <Header id="projects">{$t('section.projects.title')}</Header>
 
-<div class="flex flex-col items-center w-full lg:w-[90%] p-8 gap-8">
+<div class="flex flex-col items-center w-full lg:w-[90%] p-8 gap-12">
     <FilterArea {tag} {busy} onChange={handleFilterChange} />
     <ProjectGrid {data} />
 </div>
