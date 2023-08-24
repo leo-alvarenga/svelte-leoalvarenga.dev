@@ -10,12 +10,8 @@ then
 fi
 
 rm -rf build
-rm -rf dist
 
 npm install
-
-mkdir dist
-
 npm run build
 
 scp -r build/* "root@$TARGET:/var/www/leoalvarenga.dev/"
