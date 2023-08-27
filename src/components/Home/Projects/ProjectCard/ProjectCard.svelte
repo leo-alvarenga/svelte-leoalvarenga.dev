@@ -56,7 +56,7 @@
 
     <div class="w-[90%] flex flex-row gap-2 flex-wrap">
         {#each stack as tech}
-            <Tag className="text-sm p-[2px]">
+            <Tag className="text-sm">
                 {`#${$t(tech)}`}
             </Tag>
         {/each}
