@@ -13,6 +13,7 @@
     "common.language.en": "English 🇺🇸",
 
     "layout.navbar.item.home": "Home",
+    "layout.navbar.item.expertise": "Expertise",
     "layout.navbar.item.experience": "Experience",
     "layout.navbar.item.projects": "Projects",
     "layout.navbar.item.skills": "Skills",
