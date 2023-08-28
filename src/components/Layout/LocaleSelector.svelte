@@ -15,22 +15,24 @@
     }
 </script>
 
-<div
+<button
+    on:click={toogleVisibility}
     class={`
         bg-dark p-2 w-fit
         border border-light
-        rounded-md text-sm
+        rounded-md text-sm group
         fixed bottom-5 left-5 z-20
         flex flex-col items-center
     `}
 >
-    <button class="w-full justify-center flex items-center transition-all duration-500 hover:opacity-40" on:click={toogleVisibility}>
+    <span class="group-hover:opacity-40 transition-all duration-500">
         {#if showOptions}
             <Fa class="text-xl" icon={faXmark} />
         {:else}
             <span>{$t(`common.language.${$locale}`)}</span>
         {/if}
-    </button>
+    </span>
+
     <div
         class={`
             max-h-0 transition-all
@@ -55,4 +57,4 @@
             </button>
         {/each}
     </div>
-</div>
+</button>
