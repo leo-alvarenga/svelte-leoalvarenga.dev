@@ -5,7 +5,7 @@
 <footer
     class={`
         mt-auto relative
-        flex flex-col lg:flex-row items-center
+        flex flex-col flex-wrap lg:flex-row items-center
         justify-center py-4 w-full
         bg-light bg-opacity-40 border-t border-t-light
         backdrop-filter backdrop-blur-lg

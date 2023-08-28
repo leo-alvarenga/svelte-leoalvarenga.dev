@@ -14,7 +14,7 @@
     const options = [ 'common.all', ...projectTypesList ];
 </script>
 
-<div class="w-full flex lg:flex-row flex-col-reverse gap-4 items-center justify-stretch">
+<div class="w-full flex lg:flex-row flex-col gap-4 items-center justify-stretch">
     <div class="w-full flex flex-row flex-wrap gap-4 items-center justify-stretch">
         <h4 class="text-lg">{$t('section.projects.filter')}</h4>
     
@@ -53,7 +53,7 @@
     </div>
 
     <SearchBar
-        className="lg:ml-auto w-full lg:w-[40%]"
+        className="lg:ml-auto w-full lg:w-[50%]"
         placeholder="section.projects.search"
         onChange={(s) => onChange(s, 'search')}
         {busy}

@@ -14,7 +14,7 @@
             class={`
                 flex flex-col gap-12 p-4 pb-12 justify-between
                 items-end border border-text flex-1
-                md:border-l-0 md:first:border-l
+                lg:border-l-0 lg:first:border-l
             `}
         >
             <div class="flex flow-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
