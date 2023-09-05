@@ -3,26 +3,50 @@
     export let mt = true;
 </script>
 
-<h3
-    {id}
-    class={`
-        custom-header px-1
-        ${mt ? 'mt-5 lg:mt-20' : ''} font-major
-        text-2xl md:text-4xl
-        relative font-bold
-        before:h-[30%] before:w-full
-        before:absolute before:left-0
-        before:bottom-0 before:bg-gradient-to-r
-        before:from-primary before:to-blueLight
-        before:opacity-50 before:transition-all
-        before:duration-500 before:-z-10
-    `}
->
+<h3 {id} class={`custom-header ${mt ? 'mt' : ''}`}>
     <slot></slot>
 </h3>
 
-<style lang="postcss">
+<style>
     .custom-header {
-        text-shadow: theme(colors.background) 2px 2px;
+        position: relative;
+        padding: 0 0.25rem;
+
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-shadow: var(--background) 2px 2px;
+        font-family: Major Mono Display, monospace;
+    }
+
+    .custom-header::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        opacity: 0.5;
+        z-index: -10;
+
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(90deg, rgba(255,10,120,1) 0%, rgba(74,103,247,1) 100%);
+    }
+
+    .mt {
+        margin-top: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+        .custom-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .mt {
+            margin-top: 5rem;
+        }
     }
 </style>

@@ -3,3 +3,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary: #ff0a78;
+    --background: #0e141b;
+    --text: #f2f5f7;
+    --text-rgb: 242 245 247;
+    --textGrey: #9ca8b4;
+    --dark: #0e0e0e;
+    --light: #182635;
+    --accentPink: #e60067;
+    --accentGrey: #2b333b;
+    --accentDark: #ffe100;
+    --accentDark2: #4a67f7;
+    --blueDark: #182635;
+    --blueLight: #4a67f7;
+    --tinted: #151f28;
+    --link: #ffe100;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: var(--background);
+    color: var(--text);
+
+    user-select: none;
+}

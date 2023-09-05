@@ -40,21 +40,3 @@
         <slot></slot>
     </div>
 {/if}
-
-<style lang="postcss">
-    :global(body) {
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        min-height: 100vh;
-
-        background-color: theme(colors.background);
-        color: theme(colors.text);
-
-        user-select: none;
-    }
-</style>

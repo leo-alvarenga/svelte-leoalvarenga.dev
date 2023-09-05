@@ -8,16 +8,30 @@
 </script>
 <Header id="skills">{$t('section.skills.title')}</Header>
 
-<div
-    class={`
-        w-[90%] lg:w-[55%] rounded 
-        border-[1px] border-text 
-        border-opacity-40 flex
-        flex-row flex-wrap gap-4
-        p-4 md:p-8 justify-center
-    `}
->
+<div class="skills-box">
     {#each skills as s}
         <Tag>{s}</Tag>
     {/each}
 </div>
+
+<style>
+    .skills-box {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(var(--text-rgb) / 0.5);
+    }
+
+    @media (min-width: 768px) {
+        .skills-box {
+            width: 55%;
+            padding: 2rem;
+        }
+    }
+</style>
