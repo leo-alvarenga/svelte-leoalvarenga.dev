@@ -8,25 +8,21 @@
     export let className = '';
     export let onChange: (val: string) => void;
 
-    let border = 'border-text';
-
     let value = '';
+    let border = '';
 
     function applyBorder(focus?: boolean) {
-        border = focus ? 'border-primary' : 'border-text'
+        border = focus ? 'searchbar-wrapper-primary' : ''
     }
 </script>
 
 <div
     class={`
-        relative justify-items-center
-        flex flex-row gap-2 items-center
-        bg-background px-2 py-1 border
-        border-primary rounded-md
+        searchbar-wrapper
         ${border} ${className}
     `}
 >
-    <Fa class={`opacity-40 ${busy ? 'animate-spin' : ''}`} icon={busy ? faSpinner : faSearch} />
+    <Fa class={`searchbar-icon ${busy ? 'searchbar-icon-loading' : ''}`} icon={busy ? faSpinner : faSearch} />
 
     <input
         bind:value
@@ -36,10 +32,50 @@
         on:focus={() => applyBorder(true)}
         on:focusout={() => applyBorder()}
         on:input={() => onChange(value)}
-        class={`
-            text-text bg-background 
-            outline-none self-stretch
-            w-full
-        `}
+        class="searchbar"
     />
 </div>
+
+<style>
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .searchbar-wrapper {
+        position: relative;
+        padding: 0.25rem 0.5rem;
+
+        border-radius: 0.375rem;
+        border: 1px solid var(--text);
+
+        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-items: center;
+    }
+
+    .searchbar-wrapper-primary {
+        border-color: var(--primary);
+    }
+
+    .searchbar-icon {
+        opacity: 0.4;
+    }
+
+    .searchbar-icon-loading {
+        animation: spin 1s linear infinite;
+    }
+
+    .searchbar {
+        width: 100%;
+        color: var(--text);
+        align-self: stretch;
+        background-color: var(--background);
+
+        outline-offset: 2px;
+        outline: 2px solid transparent;
+    }
+</style>
