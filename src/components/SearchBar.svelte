@@ -44,6 +44,7 @@
     }
 
     .searchbar-wrapper {
+        width: 100%;
         position: relative;
         padding: 0.25rem 0.5rem;
 
@@ -77,5 +78,12 @@
 
         outline-offset: 2px;
         outline: 2px solid transparent;
+    }
+
+    @media (min-width: 1024px) {
+        .searchbar-wrapper {
+            width: 50%;
+            margin-left: auto;
+        }
     }
 </style>
