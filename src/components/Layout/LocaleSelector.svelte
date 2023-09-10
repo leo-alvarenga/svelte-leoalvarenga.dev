@@ -22,7 +22,7 @@
         
     `}
 >
-    <span class="locale-selector-transition">
+    <span class="t-7">
         {#if showOptions}
             <Fa class="locale-selector-x" icon={faXmark} />
         {:else}
@@ -32,15 +32,14 @@
 
     <div
         class={`
-            locale-selector-body locale-selector-transition
+            locale-selector-body t-7
             ${showOptions ? 'locale-selector-body-open' : ''}
         `}
     >
         {#each availableLocales as l}
             <button
                 class={`
-                    locale-selector-option
-                    locale-selector-transition
+                    locale-selector-option t-7
                     ${$locale === l
                         ? 'locale-selector-option-selected'
                         : 'locale-selector-option-other'}
@@ -80,7 +79,7 @@
         opacity: 0.4;
     }
 
-    .locale-selector-transition {
+    .t-7 {
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 700ms;

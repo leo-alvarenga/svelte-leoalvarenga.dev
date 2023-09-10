@@ -34,13 +34,13 @@
         >
             <Fa
                 icon={openMenu ? faXmark : faBars}
-                class="nav-transition"
+                class="t"
             />
             <div
                 class={`
                     nav-sm-menu
                     ${openMenu ? 'nav-sm-menu-open' : 'nav-sm-menu-closed'}
-                    nav-transition
+                    t
                 `}
             >
                 {#each links as { title, href }}
@@ -161,7 +161,7 @@
         border: 1px solid var(--light);
     }
 
-    .nav-transition {
+    .t {
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 500ms;
