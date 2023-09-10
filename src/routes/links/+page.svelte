@@ -27,7 +27,7 @@
 <Header mt={false}>{$t('links.title')}</Header>
 <div class="flex flex-col gap-8 w-full text-lg md:text-xl items-center">
 	{#each contactsForLinkPage as { icon, href, title }}
-		<Link className="!w-full flex flex-row px-8 py-4 gap-4 items-center min-w-[30vw]" {href} sameTab>
+		<Link sameTab large>
 			<Fa {icon} />
 			<Subheader>
 				{$t(title)}
