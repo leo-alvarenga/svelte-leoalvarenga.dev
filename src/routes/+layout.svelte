@@ -30,13 +30,22 @@
 {#if decorationEnabled}
     <Navbar {links} {innerWidth} />
     
-    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
+    <div class="flex-col items-center main-container">
         <slot></slot>
     </div>
     
     <Footer />
 {:else}
-    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
+    <div class="flex-col items-center main-container">
         <slot></slot>
     </div>
 {/if}
+
+<style>
+    .main-container {
+        height: 100%;
+        gap: 2rem;
+        margin: 2.5rem 0;
+        padding-top: 2.5rem;
+    }
+</style>
