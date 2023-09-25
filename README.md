@@ -1,7 +1,5 @@
 # leoalvarenga.dev
 
-Todo:
-- [ ] Contact section <- in progress
-- [ ] Favicon
-- [ ] Deploy script
-- [ ] Set vps default server to this page
+Reworked version of my personal web page using SvelteKit (^1.20).
+
+Currently deprecated. Decided not to move forward with maintaining this project, choosing instead to rewrite it using a Astro to make a blog implementation easier.
