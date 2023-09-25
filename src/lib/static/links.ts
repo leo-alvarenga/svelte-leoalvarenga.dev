@@ -6,16 +6,16 @@ export const links: NavbarLink[] = [
         href: '/',
     },
     {
+        title: 'layout.navbar.item.expertise',
+        href: '#expertise',
+    },
+    {
         title: 'layout.navbar.item.experience',
         href: '#xp',
     },
     {
         title: 'layout.navbar.item.projects',
         href: '#projects',
-    },
-    {
-        title: 'layout.navbar.item.skills',
-        href: '#skills',
     },
     {
         title: 'layout.navbar.item.contact',

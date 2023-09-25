@@ -9,19 +9,57 @@
 </script>
 
 {#if data.length}
-    <div class={`w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}>
+    <div class="project-grid">
         {#each data as project, index (project.title)}
             <ProjectCard {project} {index} />
         {/each}
     </div>
 {:else}
-    <div class="w-full flex flex-col items-center gap-8">
-        <img 
-            class="h-64 mt-12"
+    <div class="project-grid-empty">
+        <img
+            width="256"
             src={error404}
             alt="Not found"
         />
 
-        <h4 class="text-lg">{$t('common.notFound')}</h4>
+        <h4>{$t('common.notFound')}</h4>
     </div>
 {/if}
+
+<style>
+    .project-grid {
+        gap: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .project-grid-empty {
+        gap: 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .project-grid-empty img {
+        margin-top: 3rem;
+    }
+
+    .project-grid-empty h4 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    @media (min-width: 768px) {
+        .project-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .project-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+</style>

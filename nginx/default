@@ -1,0 +1,8 @@
+# this is to be used as the main default server for nginx
+# redirects all requests to my portfolio
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	return 301 https://leoalvarenga.dev;
+}

@@ -4,6 +4,7 @@
 	import type { Project } from "$lib";
     import code from "$lib/assets/bg-code.png";
 
+    import './styles.css';
 	import ProjectDecorator from "./ProjectDecorator.svelte";
 	import ProjectActions from "./ProjectActions.svelte";
 
@@ -11,52 +12,35 @@
     export let project: Project;
     let { thumbnail, title, inProgress, info, tags, stack, preview, repo } = project;
 
-    $: span = index > 0 && index % 3 === 0 ? 'md:row-span-2' : '';
+    $: span = index > 0 && index % 3 === 0 ? 'project-card-md' : '';
 </script>
 
 <div
     class={`
-        relative group
-        p-4 flex flex-col gap-2
-        border border-text
-        rounded-md ${span}
-        transition-all duration-500
-        hover:border-primary
+        project-card
+        t
+        ${span}
     `}
 >
     <ProjectDecorator {inProgress} {tags} />
 
-    <span class={`${thumbnail ? '' : 'relative'} h-36 overflow-hidden rounded-md`}>
+    <span class={`project-card-thumb ${thumbnail ? '' : 'project-card-thumb-blur'}`}>
         <img
             alt={title}
             src={thumbnail ?? code}
-            class={`
-                ${thumbnail ? '' : 'blur-[2px]'}
-                w-full -mt-24 transition-all
-                duration-500 group-hover:scale-125
-            `}
+            class="t"
         />
     </span>
     
-    <h4
-        class={`
-            relative w-fit p-1 mb-2
-            font-bold text-2xl
-            after:bg-gradient-to-r
-            after:from-primary
-            after:to-blueLight after:absolute
-            after:left-0 after:bottom-1
-            after:w-full after:h-[5%] after:z-10
-        `}
-    >
+    <h4 class="project-card-title">
         {$t(title)}
     </h4>
 
     <p>{$t(info)}</p>
 
-    <div class="w-[90%] flex flex-row gap-2 flex-wrap">
+    <div class="project-card-stack">
         {#each stack as tech}
-            <Tag className="text-sm p-[2px]">
+            <Tag>
                 {`#${$t(tech)}`}
             </Tag>
         {/each}

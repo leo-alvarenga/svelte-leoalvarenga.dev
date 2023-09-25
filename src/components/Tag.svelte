@@ -1,22 +1,24 @@
-<script lang="ts">
-    export let className = '';
-</script>
-
-<span
-    class={`
-        relative p-2 rounded border border-primary
-        transition-all duration-500
-        hover:text-background
-        hover:border-opacity-0 border-opacity-40
-
-        before:w-0 hover:before:w-full
-        before:h-full before:absolute
-        before:left-0 before:bottom-0
-        before:-z-[1] before:bg-gradient-to-r
-        before:from-primary before:to-blueLight
-        before:transition-all before:duration-500
-        before:rounded ${className}
-    `}
->
-    <slot></slot>
+<span class="tag">
+    <span>
+        <slot></slot>
+    </span>
 </span>
+
+<style>
+    .tag {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 2px;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, rgba(255,10,120,1) 0%, rgba(74,103,247,1) 100%);
+    }
+
+    .tag span {
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+        background-color: var(--background);
+    }
+</style>

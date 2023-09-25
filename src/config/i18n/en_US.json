@@ -13,6 +13,7 @@
     "common.language.en": "English 🇺🇸",
 
     "layout.navbar.item.home": "Home",
+    "layout.navbar.item.expertise": "Expertise",
     "layout.navbar.item.experience": "Experience",
     "layout.navbar.item.projects": "Projects",
     "layout.navbar.item.skills": "Skills",
@@ -26,7 +27,7 @@
     "page.error.default.title": "Erro",
     "page.error.default.subheader": "Something unexpected occurred",
     
-    "section.titleArea.subheader": "Trainee Software Engineer, FullStack",
+    "section.titleArea.subheader": "Trainee Software Developer, FullStack",
 
     "section.expertise.title": "Expertise",
     "data.expertise.software.title": "Software development",
