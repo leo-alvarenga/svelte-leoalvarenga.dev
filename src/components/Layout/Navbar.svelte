@@ -171,6 +171,10 @@
         opacity: 0.4;
     }
 
+    .navbar-sm {
+        padding: 0.5rem 1.5rem;
+    }
+
     @media (min-width: 1024px) {
         .navbar {
             gap: 4rem;

@@ -5,9 +5,9 @@ import vetta from '../assets/Vetta_logo.png';
 
 export const experience: Experience[] = [
     {
-        name: 'data.experience.vetta.traineeFrontend.name',
+        name: 'data.experience.vetta.frontend.name',
         time: '2023, Mar - current',
-        info: 'data.experience.vetta.traineeFrontend.info',
+        info: 'data.experience.vetta.frontend.info',
         stack: ['TypeScript', 'React', 'styled-components', 'Postgresql', 'Bash'],
         place: {
             name: 'Vetta',

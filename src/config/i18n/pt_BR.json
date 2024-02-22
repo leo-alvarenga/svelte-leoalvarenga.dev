@@ -27,7 +27,7 @@
     "page.error.default.title": "Erro",
     "page.error.default.subheader": "Algo inesperado ocorreu",
 
-    "section.titleArea.subheader": "Engenheiro de Software Trainee, FullStack",
+    "section.titleArea.subheader": "Desenvolvedor FullStack",
 
     "section.expertise.title": "Expertise",
     "data.expertise.software.title": "Desenvolvimento de software",
@@ -37,8 +37,8 @@
 
     "section.experience.title": "Experiência",
 
-    "data.experience.vetta.traineeFrontend.name": "Desenvolvedor de Software Trainee",
-    "data.experience.vetta.traineeFrontend.info": "",
+    "data.experience.vetta.frontend.name": "Desenvolvedor de Software",
+    "data.experience.vetta.frontend.info": "",
 
     "data.experience.vetta.internFrontend.name": "Desenvolvedor de Software Estagiário",
     "data.experience.vetta.internFrontend.info": "",
@@ -59,8 +59,12 @@
 
     "data.projects.type.cli": "CLI",
     "data.projects.type.frontend": "Frontend",
+    "data.projects.type.backend": "Backend",
     "data.projects.type.fullstack": "FullStack",
     "data.projects.type.linux": "Linux",
+
+    "data.projects.curvedcrater.title": "Curved Crater",
+    "data.projects.curvedcrater.info": "MVP de uma pequena e leve REST API desenvolvida para lidar com o registro de eventos e outras metricas sem a complexidade de um serviço dedicado (ex.: Google Analytics)",
     
     "data.projects.crcalc.title": "Calculadora CR",
     "data.projects.crcalc.info": "Uma Calculadora de CR (Coeficiente de Rendimento) e CRA (Coeficiente de Rendimento Acumulado)",
