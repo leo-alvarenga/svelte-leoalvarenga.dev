@@ -45,7 +45,7 @@
     "data.experience.vetta.internFrontend.info": "Active role in the Viridis NG development team where I was responsible for the implementation of new features, API integrations and bug fixing in the frontend using a stack composed of React, TypeScript, Styled components and Postgresql",
 
     "data.experience.vetta.internDevOps.name": "Intern DevOps Engineer",
-    "data.experience.vetta.internDevOps.info": "Pivotal role in ensuring high availability of internal services hosted using Kubernetes and Docker compose, as well as in IT governance and access control. Occasionally responsible for the provisioning of demo and development environments for different products in Kubernetes clusters as well as for giving feedback as well as handling DevOps tasks involving international teams when necessary",
+    "data.experience.vetta.internDevOps.info": "Pivotal role in ensuring high availability of internal services hosted using Kubernetes and Docker compose, as well as in IT governance and access control. Occasionally responsible for the provisioning of demo and development environments for different products in Kubernetes clusters, giving feedback and handling DevOps tasks involving international teams when necessary",
 
     "data.experience.ufv.ic.title": "Scientific Initiation",
     "data.experience.ufv.ic.info": "Scientific Initiation (Undergraduate Research), occasionally acting as QA Analyst and working mostly in the management, as Scrum Master and PO, and infrastructure, as a mix of DevOps Analyst and DB Admin in a MVP of a web app aimed at providing a virtual laboratory and learning environment developed by the NuPESSC research group",

@@ -38,13 +38,13 @@
     "section.experience.title": "Experiência",
 
     "data.experience.vetta.frontend.name": "Desenvolvedor de Software",
-    "data.experience.vetta.frontend.info": "",
+    "data.experience.vetta.frontend.info": "Papel ativo na equipe de desenvolvimento do Viridis NG, sendo responsável pela implementação de novos recursos, integrações de API, correção de bugs e otimizações de desempenho no frontend utilizando uma stack composta por React, TypeScript, Styled components e PostgreSQL. Também responsável pela correção de bugs em uma das APIs REST do projeto, utilizando Node.js e Express",
 
     "data.experience.vetta.internFrontend.name": "Desenvolvedor de Software Estagiário",
-    "data.experience.vetta.internFrontend.info": "",
+    "data.experience.vetta.internFrontend.info": "Papel ativo na equipe de desenvolvimento do Viridis NG, onde fui responsável pela implementação de novos recursos, integrações de API e correção de bugs no frontend utilizando uma stack composta por React, TypeScript, Styled components e PostgreSQL",
 
     "data.experience.vetta.internDevOps.name": "Analista DevOps Estagiário",
-    "data.experience.vetta.internDevOps.info": "",
+    "data.experience.vetta.internDevOps.info": "Papel fundamental na garantia da alta disponibilidade dos serviços internos hospedados usando Kubernetes e Docker Compose, assim como na governança de TI e controle de acesso. Ocasionalmente responsável pelo provisionamento de ambientes de demonstração e desenvolvimento para diferentes produtos em clusters Kubernetes, dando feedback e lidando com tarefas de DevOps envolvendo equipes internacionais quando necessário",
 
     "data.experience.ufv.ic.title": "Iniciação Cientifica",
     "data.experience.ufv.ic.info": "Iniciação Cientifica, ocasionalmente atuando como Analista de QA e trabalhando majoritariamente na gerência como Scrum Master e PO, e na infraestrutura, como um mix de Analista DevOps Analyst e DB Admin em um MVP de um web app focado em prover laboratórios e ambientes de aprendizado virtuais desenvolvido pelo NuPESSC",
