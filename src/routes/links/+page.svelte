@@ -23,7 +23,7 @@
 <Header mt={false}>{$t('links.title')}</Header>
 <div class="flex-col items-center links-container">
 	{#each contactsForLinkPage as { icon, href, title }}
-		<Link sameTab large>
+		<Link sameTab large {href}>
 			<Fa {icon} />
 			<Subheader>
 				{$t(title)}
