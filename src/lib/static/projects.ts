@@ -20,6 +20,7 @@ export const projects: Project[] = [
   
     title: 'data.projects.crcalc.title',
     info: 'data.projects.crcalc.info',
+    preview: 'https://calculadora-cr.web.app/',
     tags: [projectTags.frontend],
     stack: ['javascript', 'react.js'],
     repo: 'https://github.com/leo-alvarenga/calculadora-cr',
