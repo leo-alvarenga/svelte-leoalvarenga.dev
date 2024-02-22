@@ -12,50 +12,27 @@
 	import Header from '../../components/Header.svelte';
 </script>
 
-<img class="bg-code-alt" src={bgCode} alt="bg-code-img" />
+<img 
+	class="absolute w-[80%] max-h-[80vh] left-[20%] opacity-60 -z-10 blur-sm"
+	src={bgCode}
+	alt="bg-code-img"
+/>
 
-<img
-	height="112"
+<img 
+	class="h-28 -mt-4"
 	src={explore}
 	alt="Explore the links"
 />
 
 <Header mt={false}>{$t('links.title')}</Header>
-<div class="flex-col items-center links-container">
+<div class="flex flex-col gap-8 w-full text-lg md:text-xl items-center">
 	{#each contactsForLinkPage as { icon, href, title }}
-		<Link sameTab large {href}>
+	<Link className="!w-full flex flex-row px-8 py-4 gap-4 items-center min-w-[30vw]" {href} sameTab>
 			<Fa {icon} />
 			<Subheader>
 				{$t(title)}
 			</Subheader>
-			<span class="link-icon">
-				<Fa icon={faArrowUpRightFromSquare} />
-			</span>
+			<Fa class="ml-auto" icon={faArrowUpRightFromSquare} />
 		</Link>
 	{/each}
 </div>
-
-<style>
-	img:nth-child(2) {
-		height: 7rem;
-		margin-top: -1rem;
-	}
-
-	.links-container {
-		gap: 2rem;
-		width: 100%;
-		font-size: 1.125rem;
-    	line-height: 1.75rem;
-	}
-
-	.link-icon {
-		margin-left: auto;
-	}
-
-	@media (min-width: 768px) {
-		.links-container {
-			font-size: 1.25rem/* 20px */;
-			line-height: 1.75rem/* 28px */;
-		}
-	}
-</style>

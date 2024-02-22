@@ -7,7 +7,6 @@
 
     export let innerWidth: number;
     export let links: NavbarLink[] = [];
-
     export let openMenu = false;
 
     function handleMenu() {
@@ -19,33 +18,57 @@
 
 <nav
     class={`
-        navbar
-        ${smallVersion ? 'navbar-sm' : ''}
+        w-[100vw] flex flex-row
+        list-none gap-4 flex-wrap
+        justify-between text-xl
+        fixed top-0 z-30 items-center
+        m-0 p-2 bg-light bg-opacity-60
+        backdrop-filter backdrop-blur-lg
+        border-b border-b-light
+        lg:gap-16 lg:justify-center
+        ${smallVersion ? 'flex-row-reverse px-14' : ''}
     `}
 >
-    <a class="nav-link nav-brand" href="/">
+    <a
+        class={`
+            text-center
+            font-brand m-0 font-bold
+            hover:text-text active:text-text
+            hover:animate-nav active:animate-nav
+        `}
+        href="/"
+    >
         {'</>'}
     </a>
 
     {#if smallVersion}
         <button
             on:click={handleMenu}
-            class="nav-sm-menu-button"
+            class="p-2 rounded border border-light group"
         >
             <Fa
                 icon={openMenu ? faXmark : faBars}
-                class="t"
+                class={`
+                    group-hover:opacity-40
+                    transition-all duration-500
+                `}
             />
             <div
                 class={`
-                    nav-sm-menu
-                    ${openMenu ? 'nav-sm-menu-open' : 'nav-sm-menu-closed'}
-                    t
+                    absolute top-14 left-0
+                    flex flex-col min-w-[150px]
+                    gap-4 bg-light bg-opacity-95
+                    backdrop-filter backdrop-blur-lg
+                    border-light overflow-hidden
+                    ${openMenu ? 'max-h-64 p-4 border' : 'max-h-0 border-0'}
+                    transition-all duration-500
                 `}
             >
                 {#each links as { title, href }}
                     <a
-                        class="nav-link"
+                        class={`
+                            transition hover:animate-nav
+                        `}
                         {href}
                     >
                         {`${$t(title).toLowerCase()}_`}
@@ -55,135 +78,14 @@
         </button>
     {:else}
         {#each links as { title, href }}
-            <a class="nav-link" {href}>
+            <a
+                class={`
+                    transition hover:animate-nav
+                `}
+                {href}
+            >
                 {`${$t(title).toLowerCase()}_`}
             </a>
         {/each}
     {/if}
 </nav>
-
-<style>
-    @keyframes glitch2 {
-        0% {
-            text-shadow: none;
-            color: #f2f5f7 !important;
-        }
-        10% {
-            transform: skew(10deg);
-            font-stretch: ultra-expanded;
-            color: #f2f5f7 !important;
-        }
-        20% {
-            transform: skew(-10deg);
-            color: #f2f5f7 !important;
-        }
-        25% {
-            text-shadow: 0.125rem 0.125rem #ff0a78;
-            color: #f2f5f7 !important;
-        }
-        50% {
-            text-shadow: 0.5rem 0.125rem #ff0a78, -1rem -0.5rem #4a67f7;
-            color: #f2f5f7 !important;
-        }
-    }
-
-    .navbar {
-        width: 100vw;
-        position: fixed;
-
-        top: 0;
-        margin: 0;
-        z-index: 30;
-        padding: 0.5rem;
-
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--light);
-        background-color: rgb(var(--light-rgb) / 0.4);
-
-        gap: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-
-        list-style: none;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-
-    .nav-link {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-    }
-
-    .nav-link:hover {
-        animation: glitch2 1s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .nav-brand {
-        margin: 0;
-        font-weight: 700;
-        text-align: center;
-        font-family: Share Tech Mono, monospace;
-    }
-
-    .nav-sm-menu {
-        position: absolute;
-        left: 0;
-        top: 3.5rem;
-
-        gap: 1rem;
-        display: flex;
-        min-width: 150px;
-        flex-direction: column;
-
-        overflow: hidden;
-        backdrop-filter: blur(16px);
-        border: 0px solid var(--light);
-        background-color: rgb(var(--light-rgb) / 0.4);
-    }
-
-    .nav-sm-menu-open {
-        padding: 1rem;
-        border-width: 1px;
-        max-height: 16rem;
-    }
-
-    .nav-sm-menu-closed {
-        max-height: 0px;
-    }
-
-    .nav-sm-menu-button {
-        padding: 0.5rem;
-        border-radius: 0.25rem;
-        border: 1px solid var(--light);
-    }
-
-    .t {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 500ms;
-    }
-
-    .nav-sm-menu-button:hover .nav-sm-menu-icon {
-        opacity: 0.4;
-    }
-
-    .navbar-sm {
-        padding: 0.5rem 1.5rem;
-    }
-
-    @media (min-width: 1024px) {
-        .navbar {
-            gap: 4rem;
-            justify-content: center;
-        }
-
-        .navbar-sm {
-            flex-direction: row-reverse;
-            padding: 3.5rem 0;
-        }
-    }
-</style>

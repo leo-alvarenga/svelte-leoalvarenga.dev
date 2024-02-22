@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { experience } from "$lib";
+
     import { t } from "../../../store";
 	import Header from "../../Header.svelte";
 	import XpCard from "./XpCard.svelte";
@@ -13,40 +14,17 @@
 
 <Header id="xp">{$t('section.experience.title')}</Header>
 
-<div class="xp-wrapper">
+<div
+    class={`
+        flex flex-col relative
+        items-center w-[90%]
+        lg:w-[60%] gap-4 pl-8
+        before:absolute before:h-full
+        before:w-[1px] before:bg-text
+        before:opacity-40 before:left-0
+    `}
+>
     {#each experience as xp, i}
         <XpCard {xp} selected={i === current} on:click={() => handleClick(i)} />
     {/each}
 </div>
-
-<style>
-    .xp-wrapper {
-        display: flex;
-        flex-direction: column;
-
-        gap: 1rem;
-        width: 90%;
-        padding-left: 2rem;
-        align-items: center;
-
-        position: relative;
-    }
-
-    .xp-wrapper::before {
-        content: '';
-        position: absolute;
-        background-color: var(--text);
-        opacity: 0.4;
-
-        left: 0;
-        
-        width: 1px;
-        height: 100%;
-    }
-
-    @media (min-width: 1024px) {
-        .xp-wrapper {
-            width: 60%;
-        }
-    }
-</style>

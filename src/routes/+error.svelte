@@ -21,33 +21,19 @@
 </script>
 
 <img 
-    class="bg-code-alt"
+    class="absolute w-[80%] max-h-[80vh] left-[20%] opacity-60 -z-10 blur-sm"
     src={bgCode}
     alt="bg-code-img"
 />
 
 <img 
-    height="256"
+    class="h-64 left-[20%]"
     src={notFound ? error404 : serverDown}
     alt="Not found"
 />
 
-<div class="flex-col items-center error-container">
+<div class="px-4 w-full flex flex-col items-center gap-4 text-center">
     <Header mt={false}>{$t(title)}</Header>
     <Subheader>{$t(description)}</Subheader>
     <Link href="/" sameTab>Click here to go back</Link>
 </div>
-
-<style>
-    img:nth-child(2) {
-        left: 20%;
-        height: 16rem;
-    }
-
-    .error-container {
-        gap: 1.5rem;
-        width: 100%;
-        padding: 1rem0 ;
-        text-align: center;
-    }
-</style>

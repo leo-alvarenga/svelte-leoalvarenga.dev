@@ -10,7 +10,7 @@
 
     import '../app.css';
 
-    $: innerWidth = 0;
+    let innerWidth: number;
 
     onMount(() => {
         setLocale(getLocaleFromLocalStorage());
@@ -29,23 +29,14 @@
 
 {#if decorationEnabled}
     <Navbar {links} {innerWidth} />
-    
-    <div class="flex-col items-center main-container">
+
+    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
         <slot></slot>
     </div>
-    
+
     <Footer />
 {:else}
-    <div class="flex-col items-center main-container">
+    <div class="flex flex-col h-full items-center gap-8 my-10 pt-10">
         <slot></slot>
     </div>
 {/if}
-
-<style>
-    .main-container {
-        height: 100%;
-        gap: 2rem;
-        margin: 2.5rem 0;
-        padding-top: 2.5rem;
-    }
-</style>

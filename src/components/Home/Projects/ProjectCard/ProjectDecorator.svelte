@@ -10,13 +10,24 @@
     $: slicedTags = hasTooManyTags ? [...tags.slice(3), '...'] : tags;
 </script>
 
-<span
-    class="project-card-decorator t">
+<div
+    class={`
+        absolute -top-6
+        -left-2 list-none
+        border border-text
+        rounded-md bg-background
+        transition-all duration-500
+        group-hover:border-primary
+        flex flex-row items-center
+    `}
+>
     {#each slicedTags as tag}
         <h5
             class={`
-                t project-card-decorator-tag
-                ${inProgress ? '' : 'project-card-decorator-tag-alt'}
+                px-2 py-1
+                border-r group-hover:border-primary
+                transition-all duration-500
+                ${inProgress ? '' : 'last:border-r-0'}
             `}
         >
             {$t(tag)}
@@ -24,44 +35,10 @@
     {/each}
 
     {#if inProgress}
-        <span class="project-card-decorator-in-progress">
+        <span class="flex flex-row px-2 gap-2 items-center">
             <Fa icon={faPersonDigging} />
             
             <p>{$t('common.inProgress')}</p>
         </span>
     {/if}
-</span>
-
-<style>
-    .project-card-decorator {
-        top: -1.5rem;
-        left: -0.5rem;
-        position: absolute;
-
-        border-radius: 0.375rem;
-        border: 1px solid var(--text);
-        background-color: var(--background);
-
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .project-card-decorator-tag {
-        padding: 0.25rem 0.5rem;
-        border-right: 1px solid var(--text);
-    }
-
-    .project-card-decorator-tag-alt:last-child {
-        border-right: none;
-    }
-
-    .project-card-decorator-in-progress {
-        padding: 0 0.5rem;
-
-        gap: 0.5rem;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-</style>
+</div>

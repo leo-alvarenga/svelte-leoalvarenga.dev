@@ -9,7 +9,7 @@
 </script>
 
 <img 
-	class="bg-code"
+	class="absolute w-[80%] left-[20%] opacity-60 -z-10 blur-sm"
 	src={bgCode}
 	alt="bg-code-img"
 />
