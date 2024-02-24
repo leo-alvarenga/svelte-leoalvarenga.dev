@@ -2,7 +2,10 @@
 	import { onMount } from "svelte";
     
     import { page } from "$app/stores";
+
 	import { links, routesWithNoDec } from "$lib";
+    import bgCode from "$lib/assets/bg-code.png";
+
 	import { getLocaleFromLocalStorage, setLocale } from "../store";
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
@@ -16,6 +19,7 @@
         setLocale(getLocaleFromLocalStorage());
     });
 
+    $: bgImgClass = $page.error || $page.url.pathname === '/links' ? 'max-h-[80vh] top-[10%]' : '';
     $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
 </script>   
 
@@ -26,6 +30,12 @@
 <svelte:window bind:innerWidth />
 
 <LocaleSelector />
+
+<img 
+	class={`absolute w-[80%] left-[20%] opacity-60 -z-10 blur-sm ${bgImgClass}`}
+	src={bgCode}
+	alt="bg-code-img"
+/>
 
 {#if decorationEnabled}
     <Navbar {links} {innerWidth} />

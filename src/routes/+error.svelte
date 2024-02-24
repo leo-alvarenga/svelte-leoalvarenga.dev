@@ -1,7 +1,6 @@
 <script>
     import { page } from "$app/stores";
 
-	import bgCode from "$lib/assets/bg-code.png";
     import serverDown from "$lib/assets/undraw_server_down.svg";
     import error404 from "$lib/assets/undraw_404.svg";
 	import Header from "../components/Header.svelte";
@@ -19,12 +18,6 @@
         ? 'page.error.404.subheader'
         : 'page.error.default.subheader';
 </script>
-
-<img 
-    class="absolute w-[80%] max-h-[80vh] left-[20%] opacity-60 -z-10 blur-sm"
-    src={bgCode}
-    alt="bg-code-img"
-/>
 
 <img 
     class="h-64 left-[20%]"

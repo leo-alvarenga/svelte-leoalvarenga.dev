@@ -6,10 +6,6 @@ export const links: NavbarLink[] = [
         href: '/',
     },
     {
-        title: 'layout.navbar.item.expertise',
-        href: '#expertise',
-    },
-    {
         title: 'layout.navbar.item.experience',
         href: '#xp',
     },
@@ -20,6 +16,10 @@ export const links: NavbarLink[] = [
     {
         title: 'layout.navbar.item.contact',
         href: '#contact',
+    },
+    {
+        title: 'layout.navbar.item.more',
+        href: '/more',
     }
 ];
 

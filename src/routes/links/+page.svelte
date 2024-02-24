@@ -2,7 +2,6 @@
 	import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 
-    import bgCode from "$lib/assets/bg-code.png";
 	import explore from "$lib/assets/undraw_explore.svg";
 	
 	import { contactsForLinkPage } from "$lib";
@@ -13,13 +12,7 @@
 </script>
 
 <img 
-	class="absolute w-[80%] max-h-[80vh] left-[20%] opacity-60 -z-10 blur-sm"
-	src={bgCode}
-	alt="bg-code-img"
-/>
-
-<img 
-	class="h-28 -mt-4"
+	class="h-28 -mt-14"
 	src={explore}
 	alt="Explore the links"
 />

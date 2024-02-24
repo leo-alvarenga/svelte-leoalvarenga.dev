@@ -13,11 +13,11 @@
     "common.language.en": "English 🇺🇸",
 
     "layout.navbar.item.home": "Início",
-    "layout.navbar.item.expertise": "Expertise",
     "layout.navbar.item.experience": "Experiência",
     "layout.navbar.item.projects": "Projetos",
     "layout.navbar.item.skills": "Skills",
     "layout.navbar.item.contact": "Contato",
+    "layout.navbar.item.more": "Mais",
     "layout.footer.text": "Feito com ❤️, usando SvelteKit e TailwindCSS",
     
     "links.title": "Explore meus link",
@@ -30,10 +30,10 @@
     "section.titleArea.subheader": "Desenvolvedor FullStack",
 
     "section.expertise.title": "Expertise",
-    "data.expertise.software.title": "Desenvolvimento de software",
-    "data.expertise.software.info": "Experiência com Programação Funcional e Orientada à Objetos com Go, C, Java, C#, JavaScript e Typescript",
-    "data.expertise.frontend.title": "Frontend Dev React, Svelte",
-    "data.expertise.frontend.info": "Obsecado com desenvolvimento web Frontend moderno. Experiência com HTML, CSS, JS, Typescript, React, Svelte, SvelteKit e outros",
+    "data.expertise.backend.title": "Desenvolvimento Backend",
+    "data.expertise.backend.info": "Desenvolvimento de APIs REST de nível empresarial em arquiteturas tanto monolíticas quanto de microsserviços com ORM utilizando Go, Node.js, Express e Nest.js, além de bancos de dados relacionais e não relacionais",
+    "data.expertise.frontend.title": "Desenvolvimento Frontend",
+    "data.expertise.frontend.info": "Obcecado por desenvolvimento frontend moderno e com vasta experiência na criação de soluções completas com JavaScript, TypeScript, React.js, Next.js, Svelte, SvelteKit, além de muitas outras tecnologias relacionadas",
 
     "section.experience.title": "Experiência",
 
