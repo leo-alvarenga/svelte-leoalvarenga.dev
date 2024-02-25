@@ -7,15 +7,15 @@ export const links: NavbarLink[] = [
     },
     {
         title: 'layout.navbar.item.experience',
-        href: '#xp',
+        href: '/#xp',
     },
     {
         title: 'layout.navbar.item.projects',
-        href: '#projects',
+        href: '/#projects',
     },
     {
         title: 'layout.navbar.item.contact',
-        href: '#contact',
+        href: '/#contact',
     },
     {
         title: 'layout.navbar.item.more',

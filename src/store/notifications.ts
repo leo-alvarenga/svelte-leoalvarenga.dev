@@ -17,7 +17,6 @@ const initialValue: NotificationStore = {
             body: 'notification.cookies.body',
             title: 'notification.cookies.title',
             action: (accept?: boolean) => setAllowCookies(accept),
-            shouldDisplay: () => localStorage.getItem(LocalStorageKey.cookies) !== 'true',
             labels: {
                 ok: 'common.allow',
                 cancel: 'common.disallow',
