@@ -1,12 +1,16 @@
 {
     "test": "Olá, mundo!",
+    "common.ok": "Ok",
     "common.all": "Todos",
+    "common.other": "Outro",
+    "common.allow": "Permitir",
+    "common.cancel": "Cancelar",
+    "common.disallow": "Não permitir",
     "common.repo": "Repositório",
     "common.repo.private": "Repositório privado",
     "common.preview": "Preview",
     "common.notFound": "Não encontrado",
     "common.inProgress": "Em progresso",
-    "common.other": "Outro",
 
     "common.language": "Idioma",
     "common.language.pt": "Português 🇧🇷",
@@ -76,5 +80,8 @@
     "data.projects.togo.info": "Um app poderoso, leve e confiável baseado em linha de comando para controle de tarefas capaz de servir um front-end web localmente",
 
     "data.projects.uniguide.title": "Guia do Universitário",
-    "data.projects.uniguide.info": "Um blog simples com foco no auxílio ao estudante universitário contruído com o MERN stack"
+    "data.projects.uniguide.info": "Um blog simples com foco no auxílio ao estudante universitário contruído com o MERN stack",
+
+    "notification.cookies.title": "Permitir cookies?",
+    "notification.cookies.body": "Esta página da web utiliza cookies para salvar suas preferências de idioma e status de notificação. Não permitir o uso de cookies resultará no idioma preferido sendo redefinido e as notificações sendo exibidas toda vez que a página for carregada"
 }

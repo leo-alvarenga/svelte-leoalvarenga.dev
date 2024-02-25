@@ -6,17 +6,19 @@
 	import { links, routesWithNoDec } from "$lib";
     import bgCode from "$lib/assets/bg-code.png";
 
-	import { getLocaleFromLocalStorage, setLocale } from "../store";
+	import { getCookieConfigFromLocalStorage, getLocaleFromLocalStorage, getNotificationInfoFromLocalStorage, setAllowCookies, setLocale, setNotificationStatus, shouldAllowCookies } from "../store";
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
-	import LocaleSelector from "../components/Layout/LocaleSelector.svelte";
 
     import '../app.css';
+	import FloatingArea from "../components/Layout/FloatingArea/FloatingArea.svelte";
 
     let innerWidth: number;
 
     onMount(() => {
-        setLocale(getLocaleFromLocalStorage());
+        setAllowCookies(getCookieConfigFromLocalStorage());
+        setLocale(getLocaleFromLocalStorage(), $shouldAllowCookies);
+        setNotificationStatus(getNotificationInfoFromLocalStorage());
     });
 
     $: bgImgClass = $page.error || $page.url.pathname === '/links' ? 'max-h-[80vh] top-[10%]' : '';
@@ -29,7 +31,7 @@
 
 <svelte:window bind:innerWidth />
 
-<LocaleSelector />
+<FloatingArea />
 
 <img 
 	class={`absolute w-[80%] left-[20%] opacity-60 -z-10 blur-sm ${bgImgClass}`}

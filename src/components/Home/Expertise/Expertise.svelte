@@ -18,7 +18,7 @@
                 lg:border-l-0 lg:first:border-l
             `}
         >
-            <div class="flex flow-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
+            <div class="flex flex-row gap-4 items-start justify-between w-full text-2xl md:text-4xl">
                 <Fa {icon} />
             
                 <h3 class="text-end">{$t(title)}</h3>

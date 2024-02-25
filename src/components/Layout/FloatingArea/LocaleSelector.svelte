@@ -2,12 +2,12 @@
     import { faXmark } from "@fortawesome/free-solid-svg-icons";
     import Fa from "svelte-fa";
 
-    import { availableLocales, locale, setLocale, t } from "../../store";
+    import { allowCookies, availableLocales, locale, setLocale, t } from "../../../store";
     
     let showOptions = false;
 
     function handleLocaleChange(l: string) {
-        setLocale(l);
+        setLocale(l, $allowCookies);
     }
 
     function toogleVisibility() {
@@ -18,10 +18,9 @@
 <button
     on:click={toogleVisibility}
     class={`
-        bg-dark p-2 w-fit
-        border border-light
+        bg-dark p-2 w-fit mr-auto
+        border border-light h-fit
         rounded-md text-sm group
-        fixed bottom-5 left-5 z-20
         flex flex-col items-center
     `}
 >
@@ -49,7 +48,7 @@
                         ? 'border-blueLight'
                         : 'border-light border-opacity-20 hover:border-blueLight'}
                     border px-2 py-1
-                    rounded-md
+                    rounded-md ${showOptions ? '' : 'opacity-0'}
                 `}
                 on:click={() => handleLocaleChange(l)}
             >

@@ -1,10 +1,11 @@
 import { derived, writable } from "svelte/store";
 import pt from '../config/i18n/pt_BR.json';
 import en from '../config/i18n/en_US.json';
+import { LocalStorageKey } from "./cookies";
 
 type LocaleObj = Record<string, string | undefined>;
 
-const localeLocalStorageKey = 'i18n';
+const localeLocalStorageKey = LocalStorageKey.i18n;
 
 export const availableLocales = ['en', 'pt'];
 
@@ -51,10 +52,12 @@ export const getLocaleFromLocalStorage = () => {
     return val || availableLocales[0];
 };
 
-export const setLocale = (l: string) => {
+export const setLocale = (l: string, allowCookies: boolean) => {
     const lang = availableLocales.includes(l) ? l : availableLocales[0];
 
     locale.set(lang);
+
+    if (!allowCookies) return;
 
     try {
         localStorage.setItem(localeLocalStorageKey, lang);
