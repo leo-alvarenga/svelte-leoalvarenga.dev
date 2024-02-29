@@ -1,9 +1,10 @@
 <script lang="ts">
-    import type { Notification } from "$lib";
-	import { onMount } from "svelte";
-	import { allowCookies, t, updateStatus } from "../../../../store";
+    import { onMount } from "svelte";
 	import Fa from "svelte-fa";
 	import { faInfoCircle, faClose } from "@fortawesome/free-solid-svg-icons";
+
+    import type { Notification } from "$lib";
+	import { t, updateStatus } from "../../../../store";
 	import ActionButton from "./ActionButton.svelte";
 
     export let notification: Notification;
@@ -13,8 +14,9 @@
     let counter = Math.floor((notification.timeout ?? 0) / 1000);
 
     function handleClick(accept?: boolean) {
-        $updateStatus(notification.id, accept ? 'ok' : 'rejected', $allowCookies);
         if (action) action(!!accept);
+
+        $updateStatus(notification.id, accept ? 'ok' : 'rejected');
     }
 
     onMount(() => {

@@ -1,8 +1,10 @@
 <script lang="ts">
-	import type { Notification } from "$lib";
+	import { onMount } from "svelte";
+
+    import type { Notification } from "$lib";
 	import NotificationCard from "./NotificationCard.svelte";
 
-    export let notifications: Notification[] = [];
+    export let notifications: Notification[];
 </script>
  
 <div 

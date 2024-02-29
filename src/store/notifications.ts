@@ -1,6 +1,6 @@
 import type { Notification, NotificationStatus, NotificationStatusOption } from "$lib";
-import { derived, writable } from "svelte/store";
-import { LocalStorageKey, setAllowCookies } from "./cookies";
+import { derived, get, writable } from "svelte/store";
+import { LocalStorageKey, allowCookies, setAllowCookies } from "./cookies";
 import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
 
 export type NotificationStore = {
@@ -27,8 +27,9 @@ const initialValue: NotificationStore = {
 
 // #region helpers
 
-function handleSync(status: NotificationStatus[], allowCookies: boolean) {
-    if (!allowCookies) return;
+function handleSync(status: NotificationStatus[]) {
+    console.log(get(allowCookies));
+    if (!get(allowCookies)) return;
 
     try {
         localStorage.setItem(LocalStorageKey.notifications, JSON.stringify(status))
@@ -64,15 +65,16 @@ export const visibleNotifications = derived(notificationStore,
         $notificationStore.notifications.filter(({ id, shouldDisplay }) => !$notificationStore.status.find((item) => item.id === id) && (!shouldDisplay || shouldDisplay()))
 );
 
-export const sync = derived(notificationStore, ($notificationStore) => (allowCookies: boolean) => (
-    handleSync($notificationStore.status, allowCookies))
+export const sync = derived(notificationStore, ($notificationStore) => () => (
+    handleSync($notificationStore.status))
 );
 
-export const updateStatus = derived(notificationStore, ($notificationStore) => (id: string, val: NotificationStatusOption, allowCookies: boolean) => {
+export const updateStatus = derived(notificationStore, ($notificationStore) => (id: string, val: NotificationStatusOption) => {
     const status = [...($notificationStore.status.filter((s) => s.id !== id)), { id, status: val }];
     notificationStore.set({ ...$notificationStore, status });
     
-    handleSync(status, allowCookies);
+    console.log(status);
+    handleSync(status);
 });
 
 export function setNotificationStatus(status: NotificationStatus[]) {

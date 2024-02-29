@@ -2,12 +2,12 @@
     import { faXmark } from "@fortawesome/free-solid-svg-icons";
     import Fa from "svelte-fa";
 
-    import { allowCookies, availableLocales, locale, setLocale, t } from "../../../store";
+    import { availableLocales, locale, setLocale, t } from "../../../store";
     
     let showOptions = false;
 
     function handleLocaleChange(l: string) {
-        setLocale(l, $allowCookies);
+        setLocale(l);
     }
 
     function toogleVisibility() {

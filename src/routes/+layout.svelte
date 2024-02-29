@@ -6,7 +6,7 @@
 	import { links, routesWithNoDec } from "$lib";
     import bgCode from "$lib/assets/bg-code.png";
 
-	import { getCookieConfigFromLocalStorage, getLocaleFromLocalStorage, getNotificationInfoFromLocalStorage, setAllowCookies, setLocale, setNotificationStatus, shouldAllowCookies } from "../store";
+	import { getCookieConfigFromLocalStorage, getLocaleFromLocalStorage, getNotificationInfoFromLocalStorage, setAllowCookies, setLocale, setNotificationStatus, visibleNotifications } from "../store";
 	import Footer from "../components/Layout/Footer.svelte";
     import Navbar from "../components/Layout/Navbar.svelte";
 
@@ -16,14 +16,14 @@
     let innerWidth: number;
 
     onMount(() => {
+        setLocale(getLocaleFromLocalStorage());
         setAllowCookies(getCookieConfigFromLocalStorage());
-        setLocale(getLocaleFromLocalStorage(), $shouldAllowCookies);
         setNotificationStatus(getNotificationInfoFromLocalStorage());
     });
 
     $: bgImgClass = $page.error || $page.url.pathname === '/links' ? 'max-h-[80vh] top-[10%]' : '';
     $: decorationEnabled = !$page.error && !routesWithNoDec.includes($page.url.pathname);
-</script>   
+</script>
 
 <svelte:head>
     <title>Leonardo Alvarenga - Software Engineer, Frontend Dev</title>
@@ -31,7 +31,7 @@
 
 <svelte:window bind:innerWidth />
 
-<FloatingArea />
+<FloatingArea notifications={$visibleNotifications} />
 
 <img 
 	class={`absolute w-[80%] left-[20%] opacity-60 -z-10 blur-sm ${bgImgClass}`}

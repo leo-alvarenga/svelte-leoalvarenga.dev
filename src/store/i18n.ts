@@ -1,7 +1,7 @@
-import { derived, writable } from "svelte/store";
+import { derived, get, writable } from "svelte/store";
 import pt from '../config/i18n/pt_BR.json';
 import en from '../config/i18n/en_US.json';
-import { LocalStorageKey } from "./cookies";
+import { LocalStorageKey, allowCookies } from "./cookies";
 
 type LocaleObj = Record<string, string | undefined>;
 
@@ -49,18 +49,20 @@ export const getLocaleFromLocalStorage = () => {
         console.error('Could not retrieve language from localStorage. Defaulted to', availableLocales[0]);
     }
 
-    return val || availableLocales[0];
+    return val ?? availableLocales[0];
 };
 
-export const setLocale = (l: string, allowCookies: boolean) => {
+export const setLocale = (l: string) => {
     const lang = availableLocales.includes(l) ? l : availableLocales[0];
 
     locale.set(lang);
 
-    if (!allowCookies) return;
+    if (!get(allowCookies)) return;
+    console.log(lang, get(locale));
 
     try {
         localStorage.setItem(localeLocalStorageKey, lang);
+        console.log(localStorage.getItem(localeLocalStorageKey))
     } catch (e) {
         console.error(e, 'Error while saving the choosen language to localStorage');
     }

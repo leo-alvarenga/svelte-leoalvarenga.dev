@@ -17,7 +17,7 @@ export const shouldAllowCookies = derived(allowCookies, ($allowCookies) => $allo
 
 export function setAllowCookies(allow = false) {
     allowCookies.set(allow);
-    setLocale(get(locale), allow);
+    setLocale(get(locale));
 
     if (allow) {
         try {

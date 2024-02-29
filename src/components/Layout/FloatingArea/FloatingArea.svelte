@@ -1,8 +1,17 @@
-<script>
-	import { visibleNotifications } from "../../../store";
+<script lang="ts">
+	import type { Notification } from "$lib";
+	import { onMount } from "svelte";
 	import LocaleSelector from "./LocaleSelector.svelte";
 	import NotificationArea from "./NotificationArea/NotificationArea.svelte";
 
+    let hideNotifications = true;
+    export let notifications: Notification[];
+
+    onMount(() => {
+        setTimeout(() => {
+            hideNotifications = false;
+        }, 800);
+    });
 </script>
 
 <div
@@ -13,5 +22,8 @@
     `}
 >
     <LocaleSelector />
-    <NotificationArea notifications={$visibleNotifications} />
+
+    {#if !hideNotifications}
+        <NotificationArea {notifications} />
+    {/if}
 </div>
