@@ -34,7 +34,7 @@
 <FloatingArea notifications={$visibleNotifications} />
 
 <img 
-	class={`absolute w-[80%] left-[20%] opacity-60 -z-10 blur-sm ${bgImgClass}`}
+	class={`fixed max-w-[80vw] left-[20%] opacity-30 -z-10 blur-sm ${bgImgClass}`}
 	src={bgCode}
 	alt="bg-code-img"
 />
