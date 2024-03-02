@@ -65,3 +65,7 @@ export type Notification = Omit<NotificationStatus, 'status'> & {
     };
 };
 
+export type Playlist = {
+    title: string;
+    src: string;
+};

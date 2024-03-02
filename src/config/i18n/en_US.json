@@ -83,5 +83,8 @@
     "data.projects.uniguide.info": "A simple MERN stack blog that aims at providing relevant info to uni students",
 
     "notification.cookies.title": "Allow cookies?",
-    "notification.cookies.body": "This webpage uses cookies to save your preferences on language as well as notification status. Not allowing cookie usage will result in the prefered language being reset and notifications being shown every time the page loads"
+    "notification.cookies.body": "This webpage uses cookies to save your preferences on language as well as notification status. Not allowing cookie usage will result in the prefered language being reset and notifications being shown every time the page loads",
+
+    "page.more.playlist.title": "Soundtrack",
+    "page.more.playlist.subtitle": "A selection of playlist I usually tune to whenever I have the chance to"
 }

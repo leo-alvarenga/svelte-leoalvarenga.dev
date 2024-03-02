@@ -58,11 +58,9 @@ export const setLocale = (l: string) => {
     locale.set(lang);
 
     if (!get(allowCookies)) return;
-    console.log(lang, get(locale));
 
     try {
         localStorage.setItem(localeLocalStorageKey, lang);
-        console.log(localStorage.getItem(localeLocalStorageKey))
     } catch (e) {
         console.error(e, 'Error while saving the choosen language to localStorage');
     }

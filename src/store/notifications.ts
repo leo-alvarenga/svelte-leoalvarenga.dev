@@ -28,7 +28,6 @@ const initialValue: NotificationStore = {
 // #region helpers
 
 function handleSync(status: NotificationStatus[]) {
-    console.log(get(allowCookies));
     if (!get(allowCookies)) return;
 
     try {
@@ -72,8 +71,7 @@ export const sync = derived(notificationStore, ($notificationStore) => () => (
 export const updateStatus = derived(notificationStore, ($notificationStore) => (id: string, val: NotificationStatusOption) => {
     const status = [...($notificationStore.status.filter((s) => s.id !== id)), { id, status: val }];
     notificationStore.set({ ...$notificationStore, status });
-    
-    console.log(status);
+
     handleSync(status);
 });
 
