@@ -27,7 +27,7 @@
 <Header mt={false}>{$t('page.more.playlist.title')}</Header>
 <span class="text-md opacity-40 -mt-4">{$t('page.more.playlist.subtitle')}</span>
 
-<div class="flex flex-row gap-4 w-full items-center">
+<div class="flex flex-row gap-4 w-full items-center justify-center">
     <button on:click={() => handleClick(current - 1)} disabled={disableButtons}>
         <Fa icon={faCircleChevronLeft} />
     </button>
