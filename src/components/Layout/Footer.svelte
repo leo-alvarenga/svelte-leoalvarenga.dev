@@ -1,5 +1,7 @@
 <script>
+    import { version } from '$app/environment';
     import { t } from "../../store";
+
 </script>
 
 <footer
@@ -12,4 +14,8 @@
     `}
 >
     <h4>{$t('layout.footer.text')}</h4>
+
+    <span class="absolute right-2 bottom-1 text-sm opacity-40">
+        {version}
+    </span>
 </footer>

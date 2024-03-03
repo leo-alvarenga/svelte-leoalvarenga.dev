@@ -2,4 +2,6 @@
 
 Reworked version of my personal web page using SvelteKit (^1.20).
 
-Currently deprecated. Decided not to move forward with maintaining this project, choosing instead to rewrite from scratch using Astro to make the blog implementation easier.
+
+Disclaimer:
+All fonts used in this project are used under the allowed terms as this is a personal web page
