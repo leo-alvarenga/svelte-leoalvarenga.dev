@@ -53,7 +53,7 @@
     {/if}
 
     {#if loading && !error}
-        <span class="absolute top-0 left-0 flex flex-col gap-4 w-full h-full items-center justify-center">
+        <span class="absolute top-0 left-0 flex flex-col gap-4 w-full h-full items-center justify-center z-20">
             <Fa class="text-6xl opacity-40" icon={faSpotify} />
             <Fa class={`opacity-40 animate-spin text-4xl`} icon={faSpinner} />
         </span>
