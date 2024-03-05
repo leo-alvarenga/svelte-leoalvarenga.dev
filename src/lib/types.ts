@@ -69,3 +69,10 @@ export type Playlist = {
     title: string;
     src: string;
 };
+
+export type Media = {
+    href: string;
+    title: string;
+    cover: string;
+    previews?: string[];
+};
