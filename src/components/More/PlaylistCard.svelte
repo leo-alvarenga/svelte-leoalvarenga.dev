@@ -30,7 +30,7 @@
 
 <section
     class={`
-        h-[360px] w-[80vw] md:w-[60vw] lg:w-[40vw]
+        h-[360px] w-[70%] md:w-[60%] lg:w-[40%]
         ${visible ? 'flex' : 'hidden'}
         flex-col gap-4 items-center justify-center
         rounded-lg bg-background relative
