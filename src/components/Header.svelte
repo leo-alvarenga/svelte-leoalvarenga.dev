@@ -1,6 +1,7 @@
 <script lang="ts">
     export let id = '';
     export let mt = true;
+    export let className = '';
 </script>
 
 <h3
@@ -16,6 +17,7 @@
         before:from-primary before:to-blueLight
         before:opacity-50 before:transition-all
         before:duration-500 before:-z-10
+        ${className}
     `}
 >
     <slot></slot>
