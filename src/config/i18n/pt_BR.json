@@ -85,6 +85,12 @@
     "notification.cookies.title": "Permitir cookies?",
     "notification.cookies.body": "Esta página da web utiliza cookies para salvar suas preferências de idioma e status de notificação. Não permitir o uso de cookies resultará no idioma preferido sendo redefinido e as notificações sendo exibidas toda vez que a página for carregada",
 
+    "page.more.title": "Sobre mim",
+    "page.more.subtitle": "Fã de metal desde sempre, apaixonado por ficção científica e terror, distro-hopper e um pouco obcecado por desenvolvimento web",
+
+    "page.more.media.title": "Filmes & Séries",
+    "page.more.media.subtitle": "Uma seleção de séries e filmes que gostei de assistir e recomendo",
+
     "page.more.playlist.title": "Minhas playlists",
     "page.more.playlist.subtitle": "Uma seleção de playlists que eu curto e sempre ouço quando posso"
 }
