@@ -6,8 +6,10 @@
 	import MediaCard from "./MediaCard.svelte";
 </script>
 
-<Header>{$t('page.more.media.title')}</Header>
-<Subtitle>{$t('page.more.media.subtitle')}</Subtitle>
+<hgroup class="w-[80%] md:w-[70%] p-2 flex flex-col gap-8 items-center">
+    <Header>{$t('page.more.media.title')}</Header>
+    <Subtitle>{$t('page.more.media.subtitle')}</Subtitle>
+</hgroup>
 
 <ul
     class={`
